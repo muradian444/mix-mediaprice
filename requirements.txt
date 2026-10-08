@@ -1,0 +1,17 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9
+python-docx
+reportlab
+openpyxl
+pillow
+svglib
+pypdf
+python-pptx
+edge-tts
+docx2pdf; sys_platform == "win32"
+google-api-python-client
+google-auth
+google-auth-oauthlib
+SpeechRecognition
+imageio-ffmpeg
