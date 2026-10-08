@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="hy" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Mix Media · աշխատանքային հավելված</title>
+  <link rel="icon" href="/logo.png">
+  <!-- տառատեսակները չեն արգելափակում էջը (առանց ինտերնետի էլ էջը բացվում է անմիջապես) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <link rel="modulepreload" href="/static/js/core.js">
+</head>
+<body>
+  <!-- մուտք / հարցում -->
+  <div class="loginwrap" id="login" hidden>
+    <div class="loginbox">
+      <img src="/logo.png" alt="Mix Media">
+      <h2>Mix Media</h2>
+
+      <form id="login-form">
+        <p class="muted small" id="login-note">Մուտք / Вход</p>
+        <div class="field"><input type="text" id="login-user" autocomplete="username" placeholder="Լոգին / Логин" required></div>
+        <div class="field"><input type="password" id="login-pass" autocomplete="current-password" placeholder="Գաղտնաբառ / Пароль" required></div>
+        <button class="btn primary block" type="submit">Մտնել / Войти</button>
+        <button class="btn ghost block" type="button" id="to-register" style="margin-top:10px">Մուտք չունե՞ք — ուղարկել հարցում / Нет доступа? Запросить</button>
+      </form>
+
+      <form id="register-form" hidden>
+        <p class="muted small">Հարցում ադմինին / Запрос доступа администратору</p>
+        <div class="field"><input type="text" id="reg-name" autocomplete="name" placeholder="Անուն Ազգանուն / Имя Фамилия" required></div>
+        <div class="field"><input type="text" id="reg-login" autocomplete="username" placeholder="Լոգին (a-z, 0-9) / Логин" required pattern="[A-Za-z0-9_.\-]{3,32}"></div>
+        <div class="field"><input type="password" id="reg-pass" autocomplete="new-password" placeholder="Գաղտնաբառ / Пароль (мин. 8)" required minlength="8"></div>
+        <div class="field"><input type="password" id="reg-pass2" autocomplete="new-password" placeholder="Կրկնել / Повторите пароль" required minlength="8"></div>
+        <button class="btn primary block" type="submit">Ուղարկել հարցումը / Отправить запрос</button>
+        <button class="btn ghost block" type="button" id="to-login" style="margin-top:10px">← Մուտք / Вход</button>
+      </form>
+
+      <div id="wait-box" hidden>
+        <div class="waitic">⏳</div>
+        <p><b id="wait-title">Սպասում ենք հաստատմանը / Ждём подтверждения</b></p>
+        <p class="small muted" id="wait-text"></p>
+        <div class="badge plain" id="wait-ip"></div>
+        <button class="btn ghost block" type="button" id="wait-logout" style="margin-top:14px">Դուրս գալ / Выйти</button>
+      </div>
+
+      <div class="small" id="login-err" style="color:var(--err);margin-top:10px"></div>
+    </div>
+  </div>
+
+  <div class="layout" id="shell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img src="/logo.png" alt="">
+        <div>
+          <div class="bt">Mix Media</div>
+          <div class="bs">production</div>
+        </div>
+      </div>
+      <nav class="navlist" id="nav"></nav>
+      <div class="sfoot">
+        <div id="sfoot-company">«Միքս Մեդիա» ՍՊԸ</div>
+        <div id="sfoot-ver" class="tiny"></div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="btn icon burger" id="burger" title="Մենյու">☰</button>
+        <div class="ttl">
+          <h1 id="page-title">Mix Media</h1>
+          <div class="sub" id="page-sub"></div>
+        </div>
+        <div class="right">
+          <div class="seg" id="lang-seg">
+            <button data-lang="hy" class="on">ՀԱՅ</button>
+            <button data-lang="ru">РУС</button>
+          </div>
+          <button class="btn icon" id="theme-btn" title="Թեմա">🌙</button>
+          <button class="userchip" id="user-chip" title="Իմ անկյունը / Мой уголок" data-go="vault"><span class="av" id="user-av">?</span><span id="user-name"></span></button>
+          <button class="btn icon" id="logout-btn" title="Դուրս գալ / Выйти">⎋</button>
+        </div>
+      </header>
+      <main class="content" id="view"></main>
+    </div>
+  </div>
+
+  <!-- Ֆիքսիկ՝ օգնական -->
+  <button id="fixik-btn" title="Ֆիքսիկ — օգնություն" hidden>🛠</button>
+  <div id="fixik" hidden>
+    <div class="fh">
+      <div class="av">🛠</div>
+      <div style="flex:1">
+        <b id="fixik-name">Ֆիքսիկ</b>
+        <div class="s" id="fixik-sub">օգնական և ախտորոշում</div>
+      </div>
+      <button class="btn icon ghost" id="fixik-close" style="color:#fff">✕</button>
+    </div>
+    <div class="ftabs" id="fixik-tabs">
+      <button data-tab="help" class="on">💬 Օգնություն</button>
+      <button data-tab="check">🧪 Ստուգում</button>
+      <button data-tab="logs">⚠️ Սխալներ</button>
+    </div>
+    <div class="fbody" id="fixik-body"></div>
+    <div class="ffoot" id="fixik-foot"></div>
+  </div>
+
+  <div id="toasts"></div>
+  <div id="modal-root"></div>
+  <div id="loader" hidden><div class="box"><span class="spin"></span><span id="loader-text">Պատրաստվում է…</span></div></div>
+
+  <script type="module" src="/static/js/app.js"></script>
+  <noscript><p style="padding:20px">Միացրեք JavaScript-ը բրաուզերում:</p></noscript>
+</body>
+</html>

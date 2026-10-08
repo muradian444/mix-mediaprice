@@ -1,0 +1,1978 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1B1A5C">
+<title>Mix Media · Գներ</title>
+<meta name="description" content="Mix Media — աուդիո գովազդ սուպերմարկետներում և առևտրի կենտրոններում: Փաթեթներ, գներ և հաշվիչ / Аудиореклама в супермаркетах: пакеты, цены и калькулятор">
+<meta property="og:title" content="Mix Media · Գներ / Цены">
+<meta property="og:description" content="Աուդիո գովազդ սուպերմարկետներում · Аудиореклама в супермаркетах">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Mix Media · 💰 հանրային գնացուցակ (/price)՝ նույն գույները, ինչ հավելվածում (theme.css) */
+@property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+:root {
+  --font: "Manrope", "Noto Sans Armenian", "Segoe UI", Sylfaen, system-ui, -apple-system, Arial, sans-serif;
+  --navy: #1B1A5C; --violet: #6B3DF0; --blue: #2F8CFF; --pink: #C657FF; --mint: #19C3A6; --amber: #FFB020;
+  --grad: linear-gradient(135deg, #2F8CFF 0%, #6B3DF0 58%, #A04DFF 100%);
+  --bg: #F5F4FF; --ink: #11142D; --muted: #61678C; --accent: #6B3DF0;
+  --card: #FFFFFF; --card-2: #FAF9FF; --line: rgba(27, 26, 92, .1); --soft: rgba(107, 61, 240, .07); --tint: rgba(107, 61, 240, .14);
+  --seg-on: #FFFFFF;
+  --shadow: 0 1px 2px rgba(17, 20, 45, .04), 0 14px 34px -12px rgba(60, 40, 160, .2);
+  --shadow-lg: 0 40px 80px -28px rgba(30, 20, 100, .42);
+  --r: 28px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #07081A; --ink: #EEF0FF; --muted: #9DA3C9; --accent: #AE97FF;
+    --card: #111330; --card-2: #15183A; --line: rgba(190, 195, 255, .12); --soft: rgba(140, 110, 255, .1); --tint: rgba(140, 110, 255, .2);
+    --seg-on: #2A2D60;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 18px 40px -14px rgba(0, 0, 0, .65);
+    --shadow-lg: 0 40px 80px -24px rgba(0, 0, 0, .75);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #07081A; --ink: #EEF0FF; --muted: #9DA3C9; --accent: #AE97FF;
+  --card: #111330; --card-2: #15183A; --line: rgba(190, 195, 255, .12); --soft: rgba(140, 110, 255, .1); --tint: rgba(140, 110, 255, .2);
+  --seg-on: #2A2D60;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 18px 40px -14px rgba(0, 0, 0, .65);
+  --shadow-lg: 0 40px 80px -24px rgba(0, 0, 0, .75);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 500 16px/1.55 var(--font); letter-spacing: -.005em;
+  -webkit-font-smoothing: antialiased; overflow-x: clip; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(900px 520px at 6% 30%, rgba(107, 61, 240, .1), transparent 62%),
+              radial-gradient(820px 520px at 100% 70%, rgba(47, 140, 255, .1), transparent 60%); }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+::selection { background: rgba(107, 61, 240, .28); }
+:focus-visible { outline: 2.5px solid var(--violet); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+
+/* ------------------------------------------------ progress + nav */
+.progress { position: fixed; left: 0; top: 0; height: 3px; width: 100%; z-index: 80; background: var(--grad);
+  transform-origin: 0 50%; transform: scaleX(0); }
+.nav { position: fixed; top: 14px; left: 0; right: 0; z-index: 70; display: flex; justify-content: center; padding: 0 14px; pointer-events: none; }
+.nav-in { pointer-events: auto; width: 100%; max-width: 1240px; display: flex; align-items: center; gap: 14px; color: #fff;
+  padding: 8px 8px 8px 10px; border-radius: 999px; background: rgba(16, 14, 52, .5); border: 1px solid rgba(255, 255, 255, .12);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5);
+  transition: max-width .6s cubic-bezier(.2, .7, .2, 1), background .4s, box-shadow .4s; }
+.nav.scrolled .nav-in { max-width: 1020px; background: rgba(16, 14, 52, .84); box-shadow: 0 22px 44px -22px rgba(10, 5, 50, .7); }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; letter-spacing: -.02em; white-space: nowrap; }
+.brand img { height: 38px; width: auto; background: #fff; border-radius: 999px; padding: 4px 10px; }
+.links { display: flex; gap: 2px; margin: 0 auto; }
+.links a { text-decoration: none; color: rgba(236, 233, 255, .72); font-weight: 700; font-size: 14px; padding: 9px 14px; border-radius: 999px;
+  transition: color .25s, background .25s; white-space: nowrap; }
+.links a:hover, .links a.on { color: #fff; background: rgba(255, 255, 255, .1); }
+.nav-r { display: flex; align-items: center; gap: 8px; }
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .12); }
+.lang button { border: 0; background: none; color: rgba(236, 233, 255, .7); font-weight: 800; font-size: 12px; letter-spacing: .04em;
+  padding: 7px 11px; border-radius: 999px; transition: background .3s, color .3s; }
+.lang button.on { background: #fff; color: var(--navy); }
+.ibtn { width: 40px; height: 40px; flex: none; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .14); background: rgba(255, 255, 255, .06);
+  color: #fff; display: grid; place-items: center; transition: background .25s, transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+.ibtn:hover { background: rgba(255, 255, 255, .16); transform: rotate(20deg); }
+
+/* ------------------------------------------------ buttons */
+.btn { --h: 54px; position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: var(--h);
+  padding: 0 26px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  font-weight: 800; font-size: 15px; letter-spacing: -.01em; text-decoration: none; white-space: nowrap; overflow: hidden; isolation: isolate;
+  transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .3s, background .3s, border-color .3s, color .3s; }
+.btn svg { flex: none; transition: transform .35s cubic-bezier(.3, 1.5, .5, 1); }
+.btn:hover svg.go { transform: translateX(4px); }
+.btn:active { transform: scale(.97); }
+.btn-p { border: 0; color: #fff; background: var(--grad); box-shadow: 0 14px 30px -10px rgba(107, 61, 240, .75), inset 0 1px 0 rgba(255, 255, 255, .35); }
+.btn-p::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, .4) 50%, transparent 70%);
+  transform: translateX(-120%); transition: transform .8s; }
+.btn-p:hover::after { transform: translateX(120%); }
+.btn-p:hover { box-shadow: 0 20px 40px -10px rgba(107, 61, 240, .85), inset 0 1px 0 rgba(255, 255, 255, .35); }
+.btn-g { color: #fff; background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .22); }
+.btn-g:hover { background: rgba(255, 255, 255, .16); }
+.btn-w { border: 0; color: var(--navy); background: #fff; box-shadow: 0 16px 34px -12px rgba(0, 0, 0, .45); }
+.btn-sm { --h: 42px; padding: 0 18px; font-size: 14px; }
+.mag { will-change: transform; }
+
+/* ------------------------------------------------ hero */
+.hero { position: relative; min-height: min(100svh, 1000px); display: flex; align-items: center; overflow: hidden; isolation: isolate;
+  color: #fff; background: #0B0A2B; padding: 140px 0 80px; }
+.aurora { position: absolute; inset: -12%; z-index: -3; transform: translate3d(calc(var(--px, 0) * -30px), calc(var(--py, 0) * -22px), 0);
+  transition: transform .9s cubic-bezier(.2, .7, .2, 1); }
+.aurora i { position: absolute; border-radius: 50%; animation: drift 24s ease-in-out infinite alternate; }
+.aurora i:nth-child(1) { width: 62vw; height: 62vw; left: -8vw; top: -22vw; background: radial-gradient(closest-side, rgba(47, 140, 255, .55), transparent); }
+.aurora i:nth-child(2) { width: 58vw; height: 58vw; right: -10vw; top: -6vw; background: radial-gradient(closest-side, rgba(160, 77, 255, .55), transparent);
+  animation-duration: 28s; animation-delay: -9s; }
+.aurora i:nth-child(3) { width: 52vw; height: 52vw; left: 24vw; bottom: -30vw; background: radial-gradient(closest-side, rgba(25, 195, 166, .3), transparent);
+  animation-duration: 32s; animation-delay: -15s; }
+@keyframes drift { 0% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(6vw, 4vw, 0) scale(1.14); } 100% { transform: translate3d(-5vw, 6vw, 0) scale(.94); } }
+.hgrid { position: absolute; inset: 0; z-index: -2; opacity: .9;
+  background-image: linear-gradient(rgba(255, 255, 255, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px);
+  background-size: 64px 64px; background-position: center;
+  -webkit-mask-image: radial-gradient(ellipse 70% 62% at 50% 38%, #000 18%, transparent 74%);
+  mask-image: radial-gradient(ellipse 70% 62% at 50% 38%, #000 18%, transparent 74%); }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(560px circle at var(--hx, 50%) var(--hy, 40%), rgba(140, 100, 255, .2), transparent 60%); }
+#wave { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 72%; z-index: -1; pointer-events: none; }
+.grain { position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.hero-in { position: relative; text-align: center; max-width: 1060px; }
+.live { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 13px; border-radius: 999px; font-size: 13px; font-weight: 800;
+  letter-spacing: .02em; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .16); opacity: 0; animation: fade .8s .05s forwards; }
+.live b { width: 7px; height: 7px; border-radius: 50%; background: #3BE3A0; box-shadow: 0 0 0 0 rgba(59, 227, 160, .6); animation: ping 1.8s infinite; }
+@keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(59, 227, 160, .6); } 100% { box-shadow: 0 0 0 10px rgba(59, 227, 160, 0); } }
+.eq { display: inline-flex; gap: 2.5px; align-items: flex-end; height: 14px; }
+.eq i { width: 3px; height: 100%; border-radius: 2px; background: linear-gradient(#8FD0FF, #D59BFF); transform-origin: bottom; animation: eq 1s ease-in-out infinite; }
+.eq i:nth-child(2) { animation-duration: .7s; animation-delay: -.3s; }
+.eq i:nth-child(3) { animation-duration: 1.2s; animation-delay: -.6s; }
+.eq i:nth-child(4) { animation-duration: .85s; animation-delay: -.15s; }
+.eq i:nth-child(5) { animation-duration: 1.05s; animation-delay: -.45s; }
+@keyframes eq { 0%, 100% { transform: scaleY(.25); } 50% { transform: scaleY(1); } }
+.h1 { font-size: clamp(40px, 6.8vw, 92px); line-height: 1.06; letter-spacing: -.048em; font-weight: 800; margin: 28px auto 24px; text-wrap: balance; }
+.w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .02em .16em; margin-bottom: -.16em; }
+.w > span { display: inline-block; transform: translateY(115%); animation: up 1s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(var(--i) * 65ms + .12s); }
+.gt { background: linear-gradient(90deg, #8FD0FF, #B9A2FF, #F2A9FF, #8FD0FF); background-size: 300% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent; }
+.w > span.gt { animation: up 1s cubic-bezier(.2, .8, .2, 1) forwards, shine 7s linear infinite; animation-delay: calc(var(--i) * 65ms + .12s), 0s; }
+@keyframes up { to { transform: none; } }
+@keyframes shine { to { background-position: -300% 0; } }
+@keyframes fade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.lead { font-size: clamp(16.5px, 1.6vw, 20px); color: rgba(230, 228, 255, .76); max-width: 680px; margin: 0 auto 36px; opacity: 0; animation: fade .9s .55s forwards; }
+.hero-cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; opacity: 0; animation: fade .9s .7s forwards; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 70px; opacity: 0; animation: fade 1s .9s forwards; }
+.stat { text-align: left; padding: 20px 22px; border-radius: 22px; background: linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .025));
+  border: 1px solid rgba(255, 255, 255, .12); transition: transform .4s cubic-bezier(.2, .7, .2, 1), background .3s, border-color .3s; }
+.stat:hover { transform: translateY(-5px); background: linear-gradient(180deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .04)); border-color: rgba(255, 255, 255, .24); }
+.stat b { display: block; font-size: clamp(28px, 3vw, 40px); letter-spacing: -.045em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 6px; font-size: 13px; color: rgba(225, 222, 255, .65); font-weight: 600; line-height: 1.35; }
+.cue { position: absolute; left: 50%; bottom: 22px; width: 26px; height: 42px; margin-left: -13px; border-radius: 14px; border: 2px solid rgba(255, 255, 255, .35); }
+.cue::after { content: ""; position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: #fff; animation: cue 1.8s infinite; }
+@keyframes cue { 0% { opacity: 0; transform: translateY(0); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
+
+/* ------------------------------------------------ marquee */
+.marq { position: relative; overflow: hidden; padding: 26px 0; background: var(--card); border-bottom: 1px solid var(--line);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
+.track { display: flex; width: max-content; animation: marq 48s linear infinite; }
+.track > div { display: flex; gap: 52px; padding-right: 52px; }
+.marq:hover .track { animation-play-state: paused; }
+@keyframes marq { to { transform: translateX(-50%); } }
+.mq { display: flex; align-items: center; gap: 12px; white-space: nowrap; font-weight: 800; font-size: 17px; letter-spacing: -.02em; color: var(--muted);
+  opacity: .8; filter: grayscale(1); transition: filter .35s, opacity .35s, color .35s, transform .35s; }
+.mq:hover { filter: none; opacity: 1; color: var(--ink); transform: scale(1.06); }
+
+/* ------------------------------------------------ sections */
+.sec { padding: 120px 0; position: relative; }
+.sh { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; margin-bottom: 48px; }
+.sh > div:first-child { max-width: 720px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); background: var(--soft); border: 1px solid var(--tint); padding: 7px 15px 7px 12px; border-radius: 999px; }
+.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--grad); animation: pulse 2.2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(107, 61, 240, .5); } 100% { box-shadow: 0 0 0 9px rgba(107, 61, 240, 0); } }
+.h2 { font-size: clamp(34px, 4.8vw, 62px); line-height: 1.05; letter-spacing: -.048em; font-weight: 800; margin: 18px 0 14px; text-wrap: balance; }
+.h2 em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sub { margin: 0; color: var(--muted); font-size: 17.5px; max-width: 600px; }
+.rv { opacity: 0; transform: translateY(34px); transition: opacity 1s cubic-bezier(.2, .7, .2, 1), transform 1s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--d, 0s); }
+.rv.in { opacity: 1; transform: none; }
+
+/* spotlight + tilt (կուրսորի հետևից լույս և եռաչափ թեքում) */
+.spot { position: relative; isolation: isolate; }
+.spot::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(460px circle at var(--mx, 50%) var(--my, 50%), rgba(107, 61, 240, .14), transparent 45%); }
+.spot::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; padding: 1.5px; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(140, 100, 255, .9), rgba(47, 140, 255, .45) 40%, transparent 72%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.spot:hover::before, .spot:hover::after { opacity: 1; }
+.tilt { transform-style: preserve-3d; will-change: transform; }
+
+/* ------------------------------------------------ locations */
+.locs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.loc { width: 100%; height: 100%; min-height: 270px; display: flex; flex-direction: column; text-align: left; padding: 30px; overflow: hidden;
+  border-radius: var(--r); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); color: var(--ink);
+  transition: transform .6s cubic-bezier(.2, .7, .2, 1), box-shadow .4s, background .4s; }
+.loc:hover { box-shadow: var(--shadow-lg); }
+.loc[aria-disabled="true"] { opacity: .45; cursor: not-allowed; }
+.loc-ic { width: 66px; height: 66px; border-radius: 21px; display: grid; place-items: center; color: #fff; background: var(--grad);
+  box-shadow: 0 16px 30px -12px rgba(107, 61, 240, .8); transition: transform .5s cubic-bezier(.3, 1.6, .5, 1); }
+.loc-ic img { width: 50px; height: 50px; object-fit: contain; background: #fff; border-radius: 15px; padding: 5px; }
+.loc:hover .loc-ic { transform: translateZ(30px) rotate(-8deg) scale(1.06); }
+.loc-t { font-size: 24px; font-weight: 800; letter-spacing: -.035em; margin: 24px 0 6px; line-height: 1.2; }
+.loc-c { color: var(--muted); font-weight: 700; font-size: 15px; }
+.loc-num { position: absolute; right: -6px; bottom: -40px; z-index: -1; font-size: 170px; font-weight: 800; letter-spacing: -.07em; line-height: 1;
+  color: transparent; -webkit-text-stroke: 1.5px var(--tint); transition: transform .8s cubic-bezier(.2, .7, .2, 1), -webkit-text-stroke-color .4s; }
+.loc:hover .loc-num { transform: translate(-8px, -14px); -webkit-text-stroke-color: rgba(107, 61, 240, .35); }
+.loc-go { margin-top: auto; align-self: flex-end; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid var(--line); background: var(--card); transition: transform .5s cubic-bezier(.3, 1.5, .5, 1), background .3s, color .3s; }
+.loc:hover .loc-go { transform: rotate(-45deg); background: var(--ink); color: var(--bg); border-color: transparent; }
+.loc.on { background: linear-gradient(160deg, var(--soft), transparent 55%), var(--card); box-shadow: 0 0 0 2.5px var(--violet), var(--shadow-lg); }
+.loc.on .loc-go { transform: none; background: var(--grad); color: #fff; border-color: transparent; }
+.loc.on .loc-num { -webkit-text-stroke-color: rgba(107, 61, 240, .4); }
+
+/* ------------------------------------------------ packages */
+.seg { position: relative; display: inline-flex; padding: 5px; border-radius: 999px; background: var(--soft); border: 1px solid var(--line); }
+.seg button { position: relative; z-index: 1; border: 0; background: none; padding: 11px 20px; border-radius: 999px; font-weight: 800; font-size: 14.5px;
+  color: var(--muted); transition: color .3s; white-space: nowrap; }
+.seg button.on { color: var(--ink); }
+.seg-ind { position: absolute; left: 0; top: 5px; bottom: 5px; width: 0; border-radius: 999px; background: var(--seg-on);
+  box-shadow: 0 8px 18px -8px rgba(60, 40, 160, .5); transition: transform .5s cubic-bezier(.3, 1.3, .5, 1), width .5s cubic-bezier(.3, 1.3, .5, 1); }
+.off { display: inline-block; margin-left: 7px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 800; color: #fff;
+  background: linear-gradient(90deg, #19C3A6, #2F8CFF); vertical-align: 1px; }
+.pkgs { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; align-items: stretch; }
+.pkgs > .rv { display: flex; }
+.pkg { flex: 1; display: flex; flex-direction: column; padding: 30px 28px 28px; border-radius: 32px; overflow: hidden; cursor: pointer;
+  background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow);
+  transition: transform .6s cubic-bezier(.2, .7, .2, 1), box-shadow .4s; }
+.pkg:hover { box-shadow: var(--shadow-lg); }
+.pkg-top { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; }
+.pkg-ic { width: 54px; height: 54px; flex: none; border-radius: 18px; display: grid; place-items: center; font-size: 25px; background: var(--soft);
+  border: 1px solid var(--tint); transition: transform .5s cubic-bezier(.3, 1.6, .5, 1); }
+.pkg:hover .pkg-ic { transform: translateZ(30px) rotate(-10deg) scale(1.08); }
+.pkg-name { font-size: 27px; font-weight: 800; letter-spacing: -.035em; }
+.pkg-badge { margin-left: auto; padding: 6px 11px; border-radius: 999px; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: #fff; background: linear-gradient(90deg, #FFB020, #FF6A3D); box-shadow: 0 8px 20px -8px rgba(255, 120, 40, .9); white-space: nowrap; }
+.pkg-note { margin-top: 14px; font-size: 14.5px; font-weight: 700; color: var(--accent); }
+.pkg-price { margin: 24px 0 24px; padding-bottom: 24px; border-bottom: 1px dashed var(--line); }
+.pkg-old { height: 22px; color: var(--muted); font-weight: 700; font-size: 15px; text-decoration: line-through; }
+.pkg-num { display: flex; align-items: baseline; gap: 8px; font-size: clamp(44px, 4.4vw, 56px); font-weight: 800; letter-spacing: -.055em; line-height: 1;
+  font-variant-numeric: tabular-nums; }
+.pkg-num small { font-size: 24px; color: var(--muted); letter-spacing: 0; }
+.pkg-per { margin-top: 10px; color: var(--muted); font-size: 13.5px; font-weight: 700; }
+.pkg-f { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 15px; }
+.pkg-f li { display: flex; align-items: center; gap: 12px; font-size: 14.5px; font-weight: 600; color: var(--muted); }
+.pkg-f li svg { color: var(--accent); flex: none; }
+.pkg-f li b { margin-left: auto; color: var(--ink); font-weight: 800; text-align: right; }
+.pkg .btn { margin-top: auto; width: 100%; }
+.pkg.on { box-shadow: 0 0 0 3px var(--violet), var(--shadow-lg); }
+.pkg.pop { color: #fff; border: 2px solid transparent; animation: spin 7s linear infinite;
+  background: radial-gradient(320px 220px at 100% 0%, rgba(198, 87, 255, .5), transparent 70%) padding-box,
+              radial-gradient(300px 260px at 0% 100%, rgba(47, 140, 255, .35), transparent 70%) padding-box,
+              linear-gradient(165deg, #1B1A5C 0%, #261D78 55%, #3A22A8 100%) padding-box,
+              conic-gradient(from var(--ang), #2F8CFF, #6B3DF0, #C657FF, #19C3A6, #2F8CFF) border-box; }
+@keyframes spin { to { --ang: 360deg; } }
+.pkg.pop::before { background: radial-gradient(460px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .13), transparent 45%); }
+.pkg.pop .pkg-ic { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .2); }
+.pkg.pop .pkg-note { color: #CDBBFF; }
+.pkg.pop .pkg-old, .pkg.pop .pkg-num small, .pkg.pop .pkg-per, .pkg.pop .pkg-f li { color: rgba(225, 222, 255, .72); }
+.pkg.pop .pkg-f li b { color: #fff; }
+.pkg.pop .pkg-f li svg { color: #8FD0FF; }
+.pkg.pop .pkg-price { border-color: rgba(255, 255, 255, .18); }
+.pkg.pop.on { box-shadow: 0 0 0 3px #8FD0FF, var(--shadow-lg); }
+.pkg .btn-sel { background: var(--soft); border-color: var(--tint); color: var(--accent); }
+.pkg.pop .btn-sel { background: #fff; color: var(--navy); border: 0; }
+.support { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 30px; color: var(--muted); font-weight: 700; font-size: 14.5px; }
+.support svg { color: var(--mint); }
+
+/* ցանցերի քարտեր («Այլ սուպերմարկետներ»՝ փաթեթներ չկան) */
+.ncards { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.ncard { width: 100%; height: 100%; display: flex; flex-direction: column; gap: 14px; text-align: left; padding: 22px; border-radius: 24px; overflow: hidden;
+  background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); color: var(--ink);
+  transition: transform .6s cubic-bezier(.2, .7, .2, 1), box-shadow .4s; }
+.ncard:hover { box-shadow: var(--shadow-lg); }
+.ncard.on { box-shadow: 0 0 0 2.5px var(--violet), var(--shadow-lg); }
+.ncard-h { display: flex; align-items: center; gap: 12px; }
+.ncard-h b { font-size: 18px; letter-spacing: -.02em; line-height: 1.2; }
+.ncard-h small { display: block; color: var(--muted); font-weight: 600; font-size: 13px; }
+.ncard-p { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 14px; border-top: 1px dashed var(--line); }
+.ncard-p b { font-size: 22px; letter-spacing: -.04em; }
+.ncard-p span { color: var(--muted); font-size: 13px; font-weight: 700; }
+.ncard-p .req { font-size: 15px; color: var(--accent); }
+
+.logo { flex: none; display: grid; place-items: center; overflow: hidden; border-radius: 13px; background: #fff; border: 1px solid var(--line); }
+.logo img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+.logo.ini { color: #fff; font-weight: 800; letter-spacing: -.02em; border: 0; }
+
+/* ------------------------------------------------ how */
+.steps { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.steps::before, .steps::after { content: ""; position: absolute; left: 12.5%; right: 12.5%; top: 46px; height: 2px; border-radius: 2px; background: var(--line); }
+.steps::after { background: var(--grad); transform: scaleX(0); transform-origin: 0 50%; transition: transform 1.8s cubic-bezier(.2, .7, .2, 1) .3s; }
+.steps.in::after { transform: scaleX(1); }
+.step { position: relative; z-index: 1; text-align: center; padding: 0 8px; }
+.step-ic { position: relative; width: 92px; height: 92px; margin: 0 auto 24px; border-radius: 30px; display: grid; place-items: center; color: var(--accent);
+  background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow);
+  transition: transform .5s cubic-bezier(.3, 1.6, .5, 1), background .35s, color .35s, box-shadow .35s; }
+.step:hover .step-ic { transform: translateY(-8px) rotate(-7deg); background: var(--grad); color: #fff; border-color: transparent; box-shadow: 0 20px 34px -12px rgba(107, 61, 240, .7); }
+.step-n { position: absolute; top: -9px; right: -9px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 12px; font-weight: 800; background: var(--ink); color: var(--bg); }
+.step h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: -.025em; line-height: 1.25; }
+.step p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+/* ------------------------------------------------ calculator */
+.calc { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(330px, 1fr); gap: 24px; align-items: start; }
+.panel { padding: 32px; border-radius: 32px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.blk + .blk { margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--line); }
+.lbl { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; font-size: 12.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.lbl .cnt { margin-left: auto; letter-spacing: 0; text-transform: none; font-size: 13px; color: var(--accent); background: var(--soft); padding: 4px 11px; border-radius: 999px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.field { display: grid; gap: 8px; }
+.field span { font-size: 13px; font-weight: 800; }
+.inp { width: 100%; height: 54px; padding: 0 18px; border-radius: 17px; border: 1.5px solid var(--line); background: var(--card-2); outline: none;
+  transition: border-color .25s, box-shadow .25s, background .25s; }
+.inp::placeholder { color: var(--muted); opacity: .75; }
+.inp:hover { border-color: color-mix(in srgb, var(--violet) 40%, var(--line)); }
+.inp:focus { border-color: var(--violet); box-shadow: 0 0 0 4px rgba(107, 61, 240, .16); background: var(--card); }
+.tools { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.search { position: relative; flex: 1; min-width: 220px; }
+.search svg { position: absolute; left: 17px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search .inp { padding-left: 48px; }
+.tbtn { height: 54px; padding: 0 18px; border-radius: 17px; border: 1.5px solid var(--line); background: var(--card-2); font-weight: 800; font-size: 14px;
+  transition: border-color .25s, background .25s, transform .3s; }
+.tbtn:hover { border-color: var(--violet); background: var(--soft); }
+.nets { display: grid; gap: 12px; max-height: 600px; overflow: auto; padding: 2px 6px 2px 2px; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--tint) transparent; }
+.net { border-radius: 22px; border: 1.5px solid var(--line); background: var(--card-2); transition: border-color .3s, box-shadow .3s; }
+.net.has { border-color: color-mix(in srgb, var(--violet) 50%, var(--line)); box-shadow: 0 10px 24px -16px rgba(107, 61, 240, .6); }
+.net-h { display: flex; align-items: center; gap: 10px; padding: 10px 12px 10px 10px; }
+.net-tg { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 4px; border: 0; background: none; text-align: left; border-radius: 14px; }
+.net-n { display: grid; min-width: 0; }
+.net-n b { font-size: 16px; letter-spacing: -.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.net-n small { color: var(--muted); font-size: 12.5px; font-weight: 700; }
+.net-p { margin-left: auto; padding-left: 8px; font-size: 13.5px; font-weight: 800; color: var(--accent); white-space: nowrap; }
+.chev { flex: none; color: var(--muted); transition: transform .4s cubic-bezier(.3, 1.4, .5, 1); }
+.net.open .chev { transform: rotate(180deg); }
+.net-all { width: 36px; height: 36px; flex: none; border-radius: 12px; border: 1.5px solid var(--line); background: var(--card); color: transparent;
+  display: grid; place-items: center; transition: background .3s, border-color .3s, color .3s, transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+.net-all:hover { border-color: var(--violet); }
+.net-all.on { background: var(--grad); border-color: transparent; color: #fff; transform: scale(1.06); }
+.agrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 8px; padding: 2px 12px 14px; animation: fade .5s both; }
+.addr { display: flex; align-items: flex-start; gap: 10px; text-align: left; padding: 11px 12px; border-radius: 15px; border: 1.5px solid var(--line);
+  background: var(--card); transition: transform .3s cubic-bezier(.2, .7, .2, 1), border-color .25s, background .25s, box-shadow .25s; }
+.addr:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--violet) 55%, var(--line)); box-shadow: 0 10px 20px -14px rgba(107, 61, 240, .7); }
+.addr-ck { width: 20px; height: 20px; flex: none; margin-top: 1px; border-radius: 7px; border: 1.5px solid var(--line); color: transparent; display: grid; place-items: center;
+  transition: background .3s, border-color .3s, color .3s, transform .4s cubic-bezier(.3, 1.8, .5, 1); }
+.addr.on { border-color: var(--violet); background: var(--soft); }
+.addr.on .addr-ck { background: var(--grad); border-color: transparent; color: #fff; transform: scale(1.12); }
+.addr-t { display: grid; gap: 2px; min-width: 0; font-size: 13.5px; font-weight: 700; line-height: 1.3; }
+.addr-t small { font-size: 11.5px; font-weight: 600; color: var(--muted); }
+.addr.full { opacity: .42; cursor: not-allowed; }
+.addr.full:hover { transform: none; box-shadow: none; border-color: var(--line); }
+.empty { padding: 30px; text-align: center; color: var(--muted); font-weight: 700; }
+.stus { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.stu { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 19px; border: 1.5px solid var(--line); background: var(--card-2);
+  text-align: left; font-weight: 800; transition: border-color .3s, background .3s, transform .3s; }
+.stu:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--violet) 55%, var(--line)); }
+.stu-sw { position: relative; width: 46px; height: 27px; flex: none; border-radius: 999px; background: var(--tint); transition: background .35s; }
+.stu-sw::after { content: ""; position: absolute; left: 3px; top: 3px; width: 21px; height: 21px; border-radius: 50%; background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .25); transition: transform .45s cubic-bezier(.3, 1.5, .5, 1); }
+.stu b { margin-left: auto; color: var(--accent); white-space: nowrap; }
+.stu.on { border-color: var(--violet); background: var(--soft); }
+.stu.on .stu-sw { background: var(--grad); }
+.stu.on .stu-sw::after { transform: translateX(19px); }
+
+/* ամփոփում */
+.sum-wrap { position: sticky; top: 100px; }
+.sum { position: relative; padding: 32px; border-radius: 32px; overflow: hidden; isolation: isolate; color: #fff;
+  background: radial-gradient(420px 280px at 100% 0%, rgba(198, 87, 255, .5), transparent 65%),
+              radial-gradient(400px 320px at 0% 100%, rgba(47, 140, 255, .42), transparent 65%),
+              linear-gradient(160deg, #1B1A5C, #241C6E 60%, #30218F); box-shadow: var(--shadow-lg); }
+.sum::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: repeating-radial-gradient(circle at 115% 115%, rgba(255, 255, 255, .07) 0 1px, transparent 1.5px 30px); }
+.sum-h { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 24px; }
+.sum-h b { font-size: 21px; letter-spacing: -.03em; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 800;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .16); white-space: nowrap; max-width: 60%; overflow: hidden; text-overflow: ellipsis; }
+.sum-pkg { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-weight: 800; font-size: 14.5px; color: rgba(235, 232, 255, .9); }
+.sum-pkg i { font-style: normal; color: rgba(225, 222, 255, .6); font-weight: 700; }
+.sum-k { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: rgba(225, 222, 255, .6); }
+.sum-total { margin: 8px 0 6px; font-size: clamp(40px, 4.2vw, 56px); font-weight: 800; letter-spacing: -.055em; line-height: 1.05; font-variant-numeric: tabular-nums;
+  background: linear-gradient(90deg, #FFFFFF, #DCCEFF); -webkit-background-clip: text; background-clip: text; color: transparent; transition: opacity .4s; }
+.sum.is-empty .sum-total { opacity: .45; }
+.sum-total.req { font-size: clamp(28px, 2.6vw, 36px); letter-spacing: -.03em; }
+.sum-disc { display: flex; align-items: center; gap: 8px; min-height: 24px; font-size: 14.5px; font-weight: 700; }
+.sum-disc s { color: rgba(225, 222, 255, .55); }
+.sum-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 22px 0; }
+.sum-grid > div { padding: 14px 16px; border-radius: 18px; background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .1); transition: background .3s; }
+.sum-grid > div:hover { background: rgba(255, 255, 255, .12); }
+.sum-grid b { display: block; font-size: 23px; letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.sum-grid span { font-size: 12px; font-weight: 700; color: rgba(225, 222, 255, .65); }
+.sum-lines { display: grid; gap: 9px; margin-bottom: 24px; font-size: 13.5px; font-weight: 600; color: rgba(230, 228, 255, .82); }
+.sum-lines:empty { display: none; }
+.sum-lines div { display: flex; justify-content: space-between; gap: 14px; }
+.sum-lines b { color: #fff; white-space: nowrap; }
+.sum-hint { margin: 0 0 22px; padding: 14px 16px; border-radius: 16px; font-size: 14px; font-weight: 700; color: rgba(235, 232, 255, .85);
+  background: rgba(255, 255, 255, .06); border: 1px dashed rgba(255, 255, 255, .22); }
+.sum-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sum-btns .btn { width: 100%; padding: 0 12px; }
+.sum-btns .btn-w, .sum-btns .wide { grid-column: 1 / -1; }
+.sum-btns .btn-w svg { color: #1FAF57; }
+.sum-note { margin: 18px 0 0; font-size: 12.5px; color: rgba(225, 222, 255, .55); }
+
+/* ------------------------------------------------ CTA + footer */
+.cta { padding: 20px 0 110px; }
+.cta-box { position: relative; overflow: hidden; isolation: isolate; border-radius: 44px; padding: clamp(36px, 6.5vw, 86px); color: #fff;
+  background: radial-gradient(620px 400px at 92% 8%, rgba(198, 87, 255, .55), transparent 65%),
+              radial-gradient(620px 420px at 0% 100%, rgba(47, 140, 255, .5), transparent 65%),
+              linear-gradient(150deg, #14123F, #2A1F7E 60%, #4B2BC4); box-shadow: var(--shadow-lg); }
+.rings { position: absolute; right: -140px; top: 50%; width: 560px; height: 560px; margin-top: -280px; z-index: -1; pointer-events: none; }
+.rings i { position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid rgba(255, 255, 255, .28); opacity: 0; animation: ring 5s cubic-bezier(.2, .6, .3, 1) infinite; }
+.rings i:nth-child(2) { animation-delay: -1.66s; }
+.rings i:nth-child(3) { animation-delay: -3.33s; }
+.rings b { position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; margin: -60px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff, #B89BFF 40%, #6B3DF0 75%); box-shadow: 0 0 80px 10px rgba(160, 120, 255, .55); }
+@keyframes ring { 0% { transform: scale(.2); opacity: .95; } 100% { transform: scale(1); opacity: 0; } }
+.cta h2 { margin: 18px 0 16px; max-width: 720px; font-size: clamp(36px, 5.4vw, 72px); line-height: 1.04; letter-spacing: -.05em; text-wrap: balance; }
+.cta p { margin: 0; max-width: 560px; font-size: 18px; color: rgba(230, 228, 255, .78); }
+.cta .eyebrow { color: #fff; background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .2); }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.contacts { display: flex; flex-wrap: wrap; gap: 14px 30px; margin-top: 44px; padding-top: 28px; border-top: 1px solid rgba(255, 255, 255, .14);
+  color: rgba(230, 228, 255, .82); font-weight: 700; }
+.contacts a, .contacts span { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; transition: color .25s; }
+.contacts a:hover { color: #fff; }
+footer { padding: 0 0 46px; color: var(--muted); font-size: 14px; font-weight: 600; }
+.foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 26px; border-top: 1px solid var(--line); }
+.foot a { color: var(--accent); text-decoration: none; font-weight: 800; }
+
+/* ------------------------------------------------ skeleton, toast, mobile bar */
+.sk { border-radius: var(--r); min-height: 270px; background: linear-gradient(100deg, var(--card) 30%, var(--soft) 50%, var(--card) 70%); background-size: 300% 100%;
+  border: 1px solid var(--line); animation: skel 1.4s linear infinite; }
+@keyframes skel { to { background-position: -300% 0; } }
+.err { padding: 40px; border-radius: var(--r); background: var(--card); border: 1px solid var(--line); text-align: center; font-weight: 700; }
+.toast { position: fixed; left: 50%; bottom: 28px; z-index: 120; max-width: calc(100% - 32px); padding: 14px 20px; border-radius: 18px; color: #fff; font-weight: 700;
+  background: #17144A; border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 24px 50px -16px rgba(10, 5, 50, .7);
+  transform: translate(-50%, 30px); opacity: 0; pointer-events: none; transition: transform .5s cubic-bezier(.3, 1.4, .5, 1), opacity .3s; }
+.toast.show { transform: translate(-50%, 0); opacity: 1; }
+.mbar { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; display: none; align-items: center; gap: 12px; padding: 10px 10px 10px 20px;
+  border-radius: 24px; color: #fff; background: linear-gradient(135deg, #1B1A5C, #3A23A0); box-shadow: 0 20px 44px -14px rgba(20, 10, 80, .7);
+  transform: translateY(150%); transition: transform .5s cubic-bezier(.3, 1.3, .5, 1); }
+.mbar.show { transform: none; }
+.mbar div { flex: 1; min-width: 0; }
+.mbar small { display: block; font-size: 11.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: rgba(225, 222, 255, .65); }
+.mbar b { display: block; font-size: 22px; letter-spacing: -.04em; font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ------------------------------------------------ custom cursor (միայն մկնիկով) */
+.has-cursor, .has-cursor * { cursor: none !important; }
+.has-cursor input { cursor: text !important; }
+.cur { position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none; will-change: transform; }
+.cur-dot { width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: #fff; mix-blend-mode: difference; transition: opacity .3s, scale .3s; }
+.cur-ring { width: 42px; height: 42px; margin: -21px 0 0 -21px; border-radius: 50%; border: 1.5px solid #fff; mix-blend-mode: difference;
+  transition: width .45s cubic-bezier(.2, .7, .2, 1), height .45s cubic-bezier(.2, .7, .2, 1), margin .45s cubic-bezier(.2, .7, .2, 1), background .3s, opacity .3s; }
+.cur-ring.hov { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: rgba(255, 255, 255, .12); }
+.cur-ring.down { width: 28px; height: 28px; margin: -14px 0 0 -14px; }
+.cur-ring.lbl, .cur-ring.txt, .cur-dot.lbl { opacity: 0; }
+.cur-lbl { padding: 11px 18px; border-radius: 999px; background: var(--grad); color: #fff; font-weight: 800; font-size: 13.5px; white-space: nowrap;
+  box-shadow: 0 12px 30px -8px rgba(107, 61, 240, .75); transform: translate(-50%, -50%) scale(0); transition: transform .4s cubic-bezier(.3, 1.5, .5, 1); }
+.cur-lbl.show { transform: translate(-50%, -50%) scale(1); }
+.cur.out { opacity: 0; }
+.rip { position: fixed; z-index: 9998; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; pointer-events: none;
+  border: 2px solid var(--violet); animation: rip .7s cubic-bezier(.2, .7, .2, 1) forwards; }
+@keyframes rip { from { transform: scale(1); opacity: .9; } to { transform: scale(7); opacity: 0; } }
+
+/* ------------------------------------------------ mix-media.am/price-ի բաժինները՝ մեր դիզայնով */
+.links a { display: inline-flex; align-items: center; gap: 5px; }
+.links a svg { opacity: .6; }
+.pnav { display: inline-flex; gap: 4px; padding: 5px; border-radius: 999px; background: var(--soft); border: 1px solid var(--line); }
+.pnav > * { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; font-weight: 800; font-size: 14px;
+  text-decoration: none; color: var(--muted); transition: color .25s, background .25s; white-space: nowrap; }
+.pnav .on { background: var(--seg-on); color: var(--ink); box-shadow: 0 8px 18px -8px rgba(60, 40, 160, .5); }
+.pnav a:hover { color: var(--accent); }
+.loc-ic.photo { overflow: hidden; padding: 0; background: #fff; }
+.loc-ic .cover { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; background: none; padding: 0; }
+
+.promo { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: -18px 0 34px; }
+.promo-a { display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px; border-radius: 999px; font-weight: 800; font-size: 14px;
+  color: var(--accent); background: var(--soft); border: 1px solid var(--tint); }
+.promo-a b { width: 8px; height: 8px; border-radius: 50%; background: #19C3A6; animation: ping 1.8s infinite; }
+.promo-b { font-weight: 800; color: var(--ink); }
+.pkg-ic img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+.pkg-ic:has(img) { padding: 0; overflow: hidden; background: #fff; }
+.pkg-old { text-decoration: none; }
+.pkg-x { min-height: 20px; margin-top: 6px; font-size: 13.5px; font-weight: 800; color: var(--accent); }
+.pkg.pop .pkg-x { color: #8FD0FF; }
+.fnote { margin: 22px 0 0; text-align: center; color: var(--muted); font-size: 13.5px; font-weight: 600; }
+.btn-g2 { background: var(--soft); border-color: var(--tint); color: var(--accent); }
+
+/* մոլեր */
+.malls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.malls > .rv { display: flex; }
+.mall { flex: 1; display: flex; flex-direction: column; border-radius: 28px; overflow: hidden; cursor: pointer; background: var(--card);
+  border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .6s cubic-bezier(.2, .7, .2, 1), box-shadow .4s; outline: none; }
+.mall:hover { box-shadow: var(--shadow-lg); }
+.mall:focus-visible { box-shadow: 0 0 0 3px var(--violet), var(--shadow-lg); }
+.mall.on { box-shadow: 0 0 0 3px var(--violet), var(--shadow-lg); }
+.mall.full { opacity: .55; }
+.mall-ph { position: relative; aspect-ratio: 4 / 3; overflow: hidden; display: grid; place-items: center; color: var(--accent); background: var(--soft); }
+.mall-ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
+.mall:hover .mall-ph img { transform: scale(1.07); }
+.mall-ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(10, 8, 40, .55)); pointer-events: none; }
+.mall-free { position: absolute; left: 12px; bottom: 12px; z-index: 1; padding: 5px 11px; border-radius: 999px; font-size: 12px; font-weight: 800; color: #fff;
+  background: rgba(16, 14, 52, .55); border: 1px solid rgba(255, 255, 255, .2); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.mall-ck { position: absolute; right: 12px; top: 12px; z-index: 1; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  color: transparent; background: rgba(255, 255, 255, .85); border: 1.5px solid rgba(255, 255, 255, .9);
+  transition: background .3s, color .3s, transform .45s cubic-bezier(.3, 1.8, .5, 1); }
+.mall.on .mall-ck { background: var(--grad); color: #fff; border-color: transparent; transform: scale(1.1); }
+.mall-b { flex: 1; display: flex; flex-direction: column; gap: 8px; padding: 18px 20px 20px; }
+.mall-b h3 { margin: 0; font-size: 20px; letter-spacing: -.03em; line-height: 1.2; }
+.mall-sub { margin-top: -6px; color: var(--muted); font-size: 13.5px; font-weight: 700; }
+.mall-term { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); font-weight: 700; }
+.mall-term b { color: var(--ink); }
+.mall-term svg { color: var(--accent); }
+.mall-tog { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 6px 0 4px; }
+.mall-tog button { display: grid; gap: 0; padding: 8px 6px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--card-2); line-height: 1.15;
+  transition: border-color .25s, background .25s, color .25s, transform .3s cubic-bezier(.3, 1.6, .5, 1); }
+.mall-tog button b { font-size: 18px; letter-spacing: -.03em; }
+.mall-tog button span { font-size: 11px; font-weight: 700; color: var(--muted); }
+.mall-tog button:hover { border-color: var(--violet); }
+.mall-tog button.on { border-color: transparent; background: var(--grad); color: #fff; transform: scale(1.03); }
+.mall-tog button.on span { color: rgba(255, 255, 255, .8); }
+.mall-b > small { font-size: 12px; color: var(--muted); font-weight: 600; line-height: 1.35; }
+.mall-pr { margin-top: auto; font-size: 26px; letter-spacing: -.045em; font-variant-numeric: tabular-nums;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* պատուհան */
+html.lock { overflow: hidden; }
+.mdl { position: fixed; inset: 0; z-index: 110; display: flex; align-items: center; justify-content: center; padding: 20px;
+  background: rgba(8, 6, 30, .62); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); opacity: 0; visibility: hidden;
+  transition: opacity .35s, visibility .35s; }
+.mdl.show { opacity: 1; visibility: visible; }
+.mdl-box { width: 100%; max-width: 860px; max-height: min(88vh, 900px); display: flex; flex-direction: column; border-radius: 30px; overflow: hidden;
+  background: var(--bg); border: 1px solid var(--line); box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .6);
+  transform: translateY(30px) scale(.97); transition: transform .5s cubic-bezier(.3, 1.3, .5, 1); }
+.mdl-box.wide { max-width: 980px; }
+.mdl.show .mdl-box { transform: none; }
+.mdl-h { display: flex; align-items: center; gap: 14px; padding: 20px 22px; color: #fff;
+  background: radial-gradient(360px 200px at 100% 0%, rgba(198, 87, 255, .45), transparent 70%), linear-gradient(140deg, #1B1A5C, #30218F); }
+.mdl-tt { flex: 1; min-width: 0; }
+.mdl-tt h3 { margin: 2px 0 0; font-size: 21px; letter-spacing: -.03em; }
+.mdl-tt small { color: rgba(225, 222, 255, .7); font-weight: 700; }
+.mdl-pkg { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 800; letter-spacing: .04em;
+  background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .2); }
+.ibtn2 { width: 42px; height: 42px; flex: none; border-radius: 50%; display: grid; place-items: center; color: #fff;
+  border: 1px solid rgba(255, 255, 255, .2); background: rgba(255, 255, 255, .08); transition: background .25s, transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+.ibtn2:hover { background: rgba(255, 255, 255, .18); transform: rotate(90deg); }
+.mdl-h .ibtn2:first-child:hover { transform: translateX(-3px); }
+.mdl-b { flex: 1; overflow: auto; padding: 20px 22px; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--tint) transparent; }
+.mdl-b .tools { margin-bottom: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--card);
+  font-weight: 800; font-size: 13px; transition: border-color .25s, background .25s, color .25s; }
+.chip i { font-style: normal; font-size: 11px; padding: 1px 7px; border-radius: 999px; background: var(--soft); color: var(--accent); }
+.chip:hover { border-color: var(--violet); }
+.chip.on { background: var(--grad); color: #fff; border-color: transparent; }
+.chip.on i { background: rgba(255, 255, 255, .22); color: #fff; }
+.agrid.m { padding: 0; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.mdl-f { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding: 14px 22px; border-top: 1px solid var(--line); background: var(--card); }
+.mdl-cnt { font-weight: 700; color: var(--muted); }
+.mdl-cnt b { color: var(--accent); font-size: 20px; }
+.mdl-cnt em { font-style: normal; color: var(--ink); font-weight: 800; }
+.mdl-f > div:last-child { display: flex; gap: 10px; }
+.ncard-p > span { font-weight: 800; color: var(--accent); }
+
+/* զամբյուղ */
+.cart { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.cart-chips { min-width: 0; }
+.cart-empty { display: grid; justify-items: center; gap: 6px; padding: 26px 18px; text-align: center; border-radius: 22px; border: 1.5px dashed var(--line); color: var(--muted); }
+.cart-empty b { color: var(--ink); font-size: 16px; }
+.cart-ic { width: 54px; height: 54px; border-radius: 18px; display: grid; place-items: center; color: var(--accent); background: var(--soft); margin-bottom: 4px; }
+.cart-net { padding: 12px; border-radius: 20px; border: 1.5px solid color-mix(in srgb, var(--violet) 40%, var(--line)); background: var(--card-2); animation: fade .5s both; }
+.cart-h { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.cart-h b { font-size: 15.5px; letter-spacing: -.02em; }
+.cart-h small { color: var(--muted); font-weight: 700; }
+.cart-h em { margin-left: auto; font-style: normal; font-weight: 800; color: var(--accent); font-size: 13.5px; white-space: nowrap; }
+.cart-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chipx { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; padding: 6px 6px 6px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 700;
+  background: var(--card); border: 1px solid var(--line); animation: pop .4s cubic-bezier(.3, 1.6, .5, 1) both; }
+.chipx > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chipx button { width: 22px; height: 22px; flex: none; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--soft); color: var(--muted);
+  transition: background .25s, color .25s; }
+.chipx button:hover { background: #E8475F; color: #fff; }
+.chipx.more { padding: 6px 12px; color: var(--accent); background: var(--soft); border-color: var(--tint); }
+@keyframes pop { from { transform: scale(.8); opacity: 0; } to { transform: none; opacity: 1; } }
+.cart-tools { display: flex; gap: 10px; flex-wrap: wrap; }
+.cart-tools .tbtn { display: inline-flex; align-items: center; gap: 8px; height: 48px; }
+.cart-tools .tbtn:first-child { color: var(--accent); border-color: var(--tint); background: var(--soft); }
+.tbtn.ghost { background: none; }
+.sum-btns .btn-g { color: #fff; }
+
+/* գործընկերներ */
+.prows { display: grid; gap: 14px; }
+.prow { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.prow .track { animation-duration: var(--dur, 60s); }
+.prow.rev .track { animation-direction: reverse; }
+.prow:hover .track { animation-play-state: paused; }
+.prow .track > div { gap: 14px; padding-right: 14px; }
+.plogo { width: 118px; height: 118px; flex: none; display: grid; place-items: center; overflow: hidden; border-radius: 26px; background: #fff;
+  border: 1px solid var(--line); box-shadow: var(--shadow); filter: grayscale(1); opacity: .82;
+  transition: filter .4s, opacity .4s, transform .5s cubic-bezier(.3, 1.6, .5, 1), box-shadow .4s; }
+.plogo img { width: 100%; height: 100%; object-fit: contain; }
+.plogo:hover { filter: none; opacity: 1; transform: translateY(-6px) scale(1.05); box-shadow: var(--shadow-lg); }
+
+/* ցանց և ազատ տեղեր */
+.bgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.bcard { padding: 20px; border-radius: 24px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .5s cubic-bezier(.2, .7, .2, 1), box-shadow .4s; }
+.bcard:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.bcard-t { display: flex; align-items: center; gap: 12px; }
+.bcard-t > div { flex: 1; min-width: 0; display: grid; }
+.bcard-t b { font-size: 16.5px; letter-spacing: -.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bcard-t small { color: var(--muted); font-size: 12.5px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cta-box:has(.cgrid) .rings { right: auto; left: -300px; top: auto; bottom: -330px; margin-top: 0; }
+.cgrid { position: relative; }
+.logo.bimg { color: var(--accent); }
+.logo.bimg img { padding: 0; object-fit: cover; }
+.onair { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; font-size: 10.5px; font-weight: 800; letter-spacing: .1em;
+  color: #E8475F; background: rgba(232, 71, 95, .1); border: 1px solid rgba(232, 71, 95, .25); }
+.onair i { width: 6px; height: 6px; border-radius: 50%; background: #E8475F; animation: blink 1.2s infinite; }
+@keyframes blink { 50% { opacity: .25; } }
+.bcard-n { display: flex; align-items: baseline; gap: 6px; margin: 18px 0 10px; }
+.bcard-n b { font-size: 38px; letter-spacing: -.05em; line-height: 1; font-variant-numeric: tabular-nums; }
+.bcard-n span { color: var(--muted); font-weight: 800; }
+.bbar { height: 8px; border-radius: 999px; background: var(--soft); overflow: hidden; }
+.bbar i { display: block; height: 100%; border-radius: inherit; background: var(--grad); transition: width 1.6s cubic-bezier(.2, .7, .2, 1); }
+.bcard-f { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; color: var(--muted); font-size: 13px; font-weight: 700; }
+.bcard-f .eq i { background: linear-gradient(#2F8CFF, #C657FF); }
+.bcard.hot .bcard-n b { color: #E8475F; }
+.bcard.hot .bbar i { background: linear-gradient(90deg, #FFB020, #E8475F); }
+
+/* հետադարձ կապ */
+.cgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.citems { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 34px; }
+.citem { display: flex; align-items: center; gap: 12px; padding: 14px; border-radius: 20px; text-decoration: none; color: #fff;
+  background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .13); transition: background .3s, transform .4s cubic-bezier(.3, 1.6, .5, 1); min-width: 0; }
+.citem:hover { background: rgba(255, 255, 255, .14); transform: translateY(-3px); }
+.citem > span:last-child { display: grid; min-width: 0; }
+.citem small { color: rgba(225, 222, 255, .65); font-weight: 700; font-size: 12px; }
+.citem b { font-size: 14.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.citem-ic { width: 42px; height: 42px; flex: none; border-radius: 14px; display: grid; place-items: center; background: rgba(255, 255, 255, .12); }
+.cform { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 26px; border-radius: 28px;
+  background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .16); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.ffield { display: grid; gap: 7px; font-weight: 800; font-size: 13px; color: rgba(235, 232, 255, .85); }
+.ffield i { color: #FFB020; font-style: normal; }
+.ffield.full, .cform .full { grid-column: 1 / -1; }
+.finp { width: 100%; min-height: 50px; padding: 12px 16px; border-radius: 15px; border: 1.5px solid rgba(255, 255, 255, .16); background: rgba(255, 255, 255, .07);
+  color: #fff; font: inherit; font-weight: 600; outline: none; resize: vertical; transition: border-color .25s, background .25s, box-shadow .25s; }
+.finp::placeholder { color: rgba(225, 222, 255, .45); }
+.finp:focus { border-color: #B9A2FF; background: rgba(255, 255, 255, .12); box-shadow: 0 0 0 4px rgba(185, 162, 255, .2); }
+.cform .btn { width: 100%; }
+.foot-l { display: inline-flex; gap: 18px; }
+
+/* պատրաստի առաջարկ (թղթի տեսքով) */
+.sheet { max-width: 820px; margin: 0 auto; padding: 34px; border-radius: 18px; background: #fff; color: #16183A; box-shadow: 0 20px 50px -24px rgba(20, 10, 80, .35);
+  font-size: 13px; }
+.sh-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.sh-top img { height: 46px; width: auto; }
+.sh-co { display: grid; text-align: right; font-size: 11.5px; color: #61678C; }
+.sh-co b { color: #16183A; font-size: 12.5px; }
+.sh-bar { height: 4px; margin: 16px 0 20px; border-radius: 4px; background: linear-gradient(90deg, #2F8CFF, #6B3DF0, #C657FF); }
+.sh-title small { display: inline-block; padding: 3px 10px; border-radius: 6px; border: 1px solid #6B3DF0; color: #6B3DF0; font-size: 10.5px; font-weight: 800;
+  letter-spacing: .1em; text-transform: uppercase; }
+.sh-title h2 { margin: 8px 0 2px; font-size: 22px; letter-spacing: -.03em; }
+.sh-title p { margin: 0; color: #61678C; font-weight: 600; }
+.sh-kv { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: 18px 0; border-radius: 10px; overflow: hidden; background: #F4F1FF;
+  border-left: 3px solid #6B3DF0; }
+.sh-kv > div { display: grid; gap: 2px; padding: 9px 12px; border-right: 1px solid #DDD5FB; min-width: 0; }
+.sh-kv > div:last-child { border-right: 0; }
+.sh-kv span { font-size: 9.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #61678C; }
+.sh-kv b { font-size: 12.5px; overflow-wrap: anywhere; }
+.sh-m { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 18px; }
+.pm { padding: 12px; border-radius: 12px; border: 1px solid #E4E0F5; }
+.pm b { display: block; font-size: 18px; letter-spacing: -.03em; color: #2A1F7E; }
+.pm span { font-size: 11px; font-weight: 700; color: #61678C; }
+.sh-t { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 11.5px; }
+.sh-t th { background: #1B1A5C; color: #fff; text-align: left; padding: 7px 9px; font-size: 10.5px; letter-spacing: .04em; }
+.sh-t th:first-child { border-radius: 8px 0 0 0; width: 34px; } .sh-t th:last-child { border-radius: 0 8px 0 0; text-align: right; }
+.sh-t td { padding: 6px 9px; border-bottom: 1px solid #ECE9F7; }
+.sh-t td:last-child { text-align: right; font-weight: 800; white-space: nowrap; }
+.sh-t tr:nth-child(even) td { background: #FAF9FF; }
+.sh-sum { display: grid; gap: 6px; margin-left: auto; max-width: 420px; }
+.sh-sum > div { display: flex; justify-content: space-between; gap: 14px; padding: 4px 2px; font-weight: 700; color: #61678C; }
+.sh-sum s { color: #61678C; }
+.sh-sum b { color: #16183A; }
+.sh-sum .big { margin-top: 4px; padding: 12px 14px; border-radius: 10px; color: #fff; background: linear-gradient(135deg, #2F8CFF, #6B3DF0 58%, #A04DFF); }
+.sh-sum .big b { color: #fff; font-size: 18px; }
+.sh-note { margin: 16px 0 0; color: #61678C; font-size: 11px; }
+@media print {
+  html.printing body > *:not(.prop) { display: none !important; }
+  html.printing .prop { position: static; display: block; padding: 0; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; opacity: 1; visibility: visible; }
+  html.printing .prop .mdl-box { max-width: none; max-height: none; border: 0; border-radius: 0; box-shadow: none; background: #fff; transform: none; }
+  html.printing .prop .mdl-h, html.printing .prop .mdl-f { display: none; }
+  html.printing .prop .mdl-b { padding: 0; overflow: visible; }
+  html.printing .sheet { box-shadow: none; padding: 0; border-radius: 0; }
+  html.printing body { background: #fff; }
+  html.printing body::before { display: none; }
+  @page { margin: 12mm; }
+}
+
+@media (max-width: 1060px) {
+  .malls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cgrid { grid-template-columns: 1fr; gap: 30px; }
+}
+@media (max-width: 640px) {
+  .malls { grid-template-columns: 1fr; }
+  .pnav { width: 100%; } .pnav > * { flex: 1; justify-content: center; padding: 10px 8px; }
+  .promo { margin-top: -10px; }
+  .citems, .cform { grid-template-columns: 1fr; }
+  .cform { padding: 18px; }
+  .mdl { padding: 0; align-items: flex-end; }
+  .mdl-box, .mdl-box.wide { max-height: 92vh; border-radius: 26px 26px 0 0; }
+  .mdl-b { padding: 16px; }
+  .mdl-f { padding: 12px 16px; }
+  .mdl-f .btn { flex: 1; }
+  .mdl-cnt { flex-basis: 100%; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px 14px; padding: 0 16px 4px; scrollbar-width: none; }
+  .chip { flex: none; }
+  .agrid.m { grid-template-columns: 1fr; }
+  .sheet { padding: 18px; }
+  .sh-kv { grid-template-columns: 1fr 1fr; }
+  .sh-m { grid-template-columns: 1fr 1fr; }
+  .plogo { width: 92px; height: 92px; border-radius: 22px; }
+  .cart-h { flex-wrap: wrap; }
+  .cart-h em { flex-basis: 100%; margin-left: 44px; }
+}
+/* ------------------------------------------------ responsive */
+@media (max-width: 1060px) {
+  .calc { grid-template-columns: minmax(0, 1fr); }
+  .sum-wrap { position: relative; top: 0; }
+  .mbar { display: flex; }
+}
+@media (max-width: 960px) {
+  .links { display: none; }
+  .nav-r { margin-left: auto; }
+  .locs { grid-template-columns: 1fr; }
+  .loc { min-height: 0; }
+  .steps { grid-template-columns: 1fr 1fr; row-gap: 44px; }
+  .steps::before, .steps::after { display: none; }
+  .stats { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 0 16px; }
+  .sec { padding: 80px 0; }
+  .hero { padding: 120px 0 70px; }
+  .hero-cta .btn { width: 100%; }
+  .stats { margin-top: 48px; gap: 10px; }
+  .stat { padding: 16px; }
+  .panel, .sum { padding: 22px; border-radius: 26px; }
+  .two { grid-template-columns: 1fr; }
+  .seg button { padding: 10px 14px; font-size: 13.5px; }
+  .sh > div { min-width: 0; max-width: 100%; }
+  .sh > div:has(> .seg) { width: 100%; }
+  .panel .seg, .sh .seg { display: flex; width: 100%; }
+  .panel .seg button, .sh .seg button { flex: 1; padding: 9px 6px; white-space: normal; line-height: 1.25; }
+  .panel .seg .off, .sh .seg .off { margin: 3px 0 0; }
+  .steps { grid-template-columns: 1fr; }
+  .brand span, .nav .btn span { display: none; }
+  .nav .btn { width: 42px; padding: 0; }
+  .cta-box { border-radius: 30px; }
+  .rings { right: -260px; opacity: .6; }
+  .toast { bottom: 96px; }
+  .agrid { grid-template-columns: 1fr; }
+  .cue { display: none; }
+  .net-tg { flex-wrap: wrap; row-gap: 2px; }
+  .net-n { flex: 1; }
+  .net-p { flex-basis: 100%; margin-left: 50px; padding-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .rv { opacity: 1; transform: none; }
+  .w > span { transform: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header class="nav" id="nav"></header>
+<main>
+  <section class="hero" id="top">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="hgrid" aria-hidden="true"></div>
+    <canvas id="wave" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap hero-in" id="heroIn"></div>
+    <div class="cue" aria-hidden="true"></div>
+  </section>
+  <section class="sec" id="where"><div class="wrap"><div class="locs"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div></div></section>
+  <section class="sec" id="packages" style="padding-top:0"></section>
+  <section class="sec" id="calc" style="padding-top:20px"></section>
+  <section class="sec" id="partners" style="padding-top:20px"></section>
+  <section class="sec" id="why" style="padding-top:20px"></section>
+  <section class="sec" id="network" style="padding-top:20px"></section>
+  <section class="cta" id="contact"></section>
+</main>
+<footer id="foot"></footer>
+<div class="mbar" id="mbar"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="text-align:center;padding:40px">Միացրեք JavaScript-ը / Включите JavaScript · +374 44 702 703</p></noscript>
+
+<script>
+(() => {
+'use strict';
+
+/* ================================================================ միջավայր */
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+const mem = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } },
+};
+const qs = new URLSearchParams(location.search);
+let lang = (qs.get('lang') || mem.get('mm-price-lang') || (navigator.language || '').slice(0, 2)).toLowerCase() === 'ru' ? 'ru' : 'hy';
+const savedTheme = mem.get('mm-price-theme');
+if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.dataset.theme = savedTheme;
+
+/* ================================================================ տեքստեր */
+const I = {
+  hy: {
+    title: 'Mix Media · Գնացուցակ',
+    nav: { bubuka: 'Բուբուկա', calc: 'Հաշվիչ', network: 'Ցանցեր', malls: 'Կենտրոններ', contact: 'Կապ' },
+    live: 'Եթերում հիմա',
+    heroA: 'Ձեր գովազդը հնչում է այնտեղ, որտեղ', heroB: 'գնումներ են անում',
+    lead: 'Աուդիո գովազդ սուպերմարկետներում և առևտրի կենտրոններում։ Ընտրեք վայրը և փաթեթը՝ արժեքը կտեսնեք անմիջապես։',
+    cta1: 'Ընտրել վայրը', cta2: 'Հաշվել արժեքը',
+    stAddr: 'Հեռարձակման կետ', stNets: 'Խանութների ցանց', stSpots: 'Եթեր օրական յուրաքանչյուր կետում', stCap: 'Գովազդատու առավելագույնը մեկ կետում',
+    step: 'Քայլ',
+    whereT: ['Որտեղ եք ցանկանում ', 'գովազդել', ''], whereS: 'Ընտրեք վայրը՝ փաթեթները և հաշվարկը կփոխվեն ինքնաբերաբար։',
+    pnavSmp: 'SMP Գնացուցակ', pnavBubuka: 'Բուբուկա',
+    city: 'Yerevan City', malls: 'Առևտրի կենտրոններ', other: 'Այլ սուպերմարկետներ',
+    addrs: 'հասցե', mallsN: 'մոլ', netsN: 'ցանց', points: 'կետ',
+    choose: 'Ընտրել', chooseLoc: 'Ընտրել լոկացիա', chosen: 'Ընտրված է', add: 'Ավելացնել', open: 'Բացել',
+    avail: c => `Հասանելի է ${c} ընկերության համար`, book: 'Ամրագրեք Ձեր տեղը այսօր 📌',
+    cityT: ['Yerevan City ', 'փաթեթներ', ''], smpT: ['Հեռարձակման ', 'ծառայություն', ''],
+    mallT: ['Առևտրի ', 'կենտրոններ', ''], mallS: 'Ընտրեք օրական հեռարձակման քանակը (15 կամ 30)՝ տեսնելու համար 30-օրյա փաթեթի արժեքը։',
+    month: 'Ամսական', half: '6 ամսով', year: 'Տարեկան', popular: 'Թոփ',
+    store: 'Խանութ', storesN: n => `${n} խանութ`, all: 'բոլորը', airings: 'Հեռարձակման քանակ', perDay: n => `օրական ${n}`,
+    clip: 'Հոլովակ', sec: 'վ.',
+    per: { month: 'մեկ խանութ · ամսական', half: 'մեկ խանութ · 6 ամիս', year: 'մեկ խանութ · տարեկան' },
+    perMonthOf: { month: '/ ամիս', half: '/ ամիս · 6 ամսով', year: '/ ամիս · տարեկան' },
+    monthlyWas: 'Ամսական՝',
+    maxNote: n => `* Max փաթեթը ներառում է բոլոր ${n} մասնաճյուղերը և 2 անվճար աուդիոձայնագրում։`,
+    support: 'Տեխնիկական աջակցություն՝ ամբողջ ժամկետում',
+    term: 'Ժամկետ', oneMonth: '1 ամիս', bPerDay: 'հեռ./օր', mallPriceL: n => `Օրական ${n} հեռարձակման արժեքը (ներառյալ ԱԱՀ)`,
+    onReq: 'Գինը՝ ըստ պահանջի', mo: 'ամիս', free: 'ազատ', full: 'Տեղ չկա',
+    whyE: 'Առավելություններ', whyT: ['Ինչու՞ ', 'MIX MEDIA', ''], whyS: 'Ամեն ինչ՝ գովազդի արդյունավետության համար։',
+    why: [['bolt', 'Արագ', '3 քայլով պատվեր'], ['report', 'Հաշվետվություն', 'Հեռարձակումների հաշվետվություն'],
+      ['headset', 'Աջակցություն', '24/7 մոնիտորինգ'], ['shield', 'Անվտանգ', 'Հուսալի սերվիս']],
+    calcT: ['Կանխատեսվող ', 'արդյունքներ', ''], calcS: 'Ընտրեք հասցեները և ժամկետը՝ գումարը կհաշվվի անմիջապես։',
+    period: 'Ժամկետ', brand: 'Ձեր բրենդը', brandPh: 'օր.՝ Mix Media, Yoga', contact: 'Կոնտակտ', contactPh: 'Անուն, հեռախոս',
+    addresses: 'Ընտրված հասցեներ', selected: 'ընտրված', pickAddr: 'Ընտրել հասցեները', editAddr: 'Ավելացնել / փոխել', clear: 'Մաքրել',
+    cartEmpty: 'Հասցեներ դեռ ընտրված չեն', cartEmptyS: 'Ընտրեք փաթեթ կամ առևտրի կենտրոն վերևում, ապա՝ հասցեները։',
+    showAll: n => `Ցույց տալ բոլոր ${n}-ը`, hide: 'Թաքցնել', remove: 'Հեռացնել',
+    studio: 'Ստուդիական ծառայություններ',
+    sumT: 'Ձեր հաշվարկը', total: 'Ընդամենը (հարկերը ներառյալ)', sAir: 'Ընդհանուր եթերներ', sPer: '1 եթերի արժեքը', sAddr: 'Ընտրված հասցեներ', sDays: 'Օր',
+    byNet: 'Ցանցի գնով', byMall: 'Մոլի գնով', pkgL: 'Փաթեթ', disc: 'Զեղչ', broadcast: 'Հեռարձակում', studioL: 'Ստուդիա', monthlyPrice: 'ամսական գնով',
+    hint: 'Ընտրեք փաթեթ և հասցեներ՝ հաշվարկը կհայտնվի այստեղ։',
+    pickPkg: 'Այս հասցեների գինը փաթեթով է՝ ընտրեք փաթեթը վերևում (Քայլ 2)։',
+    noPrice: 'Որոշ հասցեների գինը՝ ըստ պահանջի․ ուղարկեք հայտը՝ մենեջերը կճշտի։',
+    note: 'Հաշվարկը տեղեկատվական է․ վերջնական գինը՝ պայմանագրով։',
+    wa: 'WhatsApp', tg: 'Telegram', order: 'Ձևակերպել պատվեր', consult: 'Խորհրդատվություն',
+    tgCopied: 'Տեքստը պատճենվեց՝ տեղադրեք Telegram-ում և սեղմեք «Send»', need: 'Ընտրեք գոնե մեկ հասցե', added: n => `Ավելացվեց ${n} հասցե ✓`,
+    mTotal: 'Ընդամենը', mBtn: 'Հաշվարկ',
+    mdlT: 'Ընտրեք հասցեները', mdlChains: 'Ընտրեք հեռարձակման ցանցը', mdlChainsS: 'Սեղմեք ցանցի վրա՝ հասցեները հաջորդ քայլում',
+    search: 'Որոնել հասցեով…', searchNet: 'Որոնել ցանց…', selAll: 'Նշել բոլորը', unselAll: 'Հանել բոլորը', allDistricts: 'Բոլորը',
+    nothing: 'Ոչինչ չգտնվեց', selectedN: 'Ընտրված է՝', confirm: 'Հաստատել', back: 'Հետ', close: 'Փակել',
+    partnersE: 'Գործընկերներ', partnersT: ['Մեզ ', 'վստահում են', ''],
+    netE: 'In-Store ցանց', netT: ['Հեռարձակման ցանց և ', 'ակտիվ տեղեր', ''],
+    netS: c => `Mix Media-ն հեռարձակում է Հայաստանի խոշորագույն սուպերմարկետներում և առևտրի կենտրոններում։ Յուրաքանչյուր վայրում առավելագույնը ${c} գովազդային տեղ — տեսեք ազատ տեղերը ստորև։`,
+    subSmp: 'Սուպերմարկետներ', subMall: 'Առևտրի կենտրոն', freeOf: c => `ազատ տեղ ${c}-ից`, lastPlaces: 'Վերջին տեղերը', pointsN: n => `${n} կետ`,
+    ctaE: 'Կապ', ctaT: 'Հետադարձ կապ',
+    ctaS: 'Լրացրեք ձևը, և մեր մասնագետը կկապվի ձեզ հետ։ Եթե արդեն լրացրել եք հաշվիչը, ընտրություններն ավտոմատ կուղարկվեն Telegram-ով։',
+    callUs: 'Զանգահարեք', email: 'Էլ. փոստ', writeNow: 'Գրել հիմա',
+    fName: 'Անուն', fPhone: 'Հեռախոս', fCompany: 'Ընկերություն', fMsg: 'Հաղորդագրություն', fSend: 'Ուղարկել Telegram-ով',
+    fNeed: 'Լրացրեք անունը և հեռախոսը', callReq: 'Պատվիրել զանգ — Mix Media',
+    company: '«Միքս Մեդիա» ՍՊԸ', address: 'ՀՀ, ք. Երևան, Լևոնյան 48',
+    err: 'Չհաջողվեց բեռնել գները։ Զանգահարեք մեզ՝ ',
+    reqT: 'Mix Media · Հայտ', place: 'Վայր', months: 'ամիս', theme: 'Թեմա',
+    propT: 'Պատրաստի գովազդային առաջարկ', propDoc: 'Առևտրային առաջարկ', propSlogan: 'Mix Media — Մեր ձայնը միշտ լսելի է',
+    propPrint: 'Տպել / PDF', propDate: 'Ամսաթիվ', propClient: 'Հաճախորդ', propN: 'N', propNet: 'Ցանց', propAddr: 'Հասցե', propFreq: 'Հաճախ.',
+    propCost: 'Արժեք / ամիս', propAddon: 'Լրացուցիչ ծառայություն', propSum: 'Արժեք', propTotal: 'Ընդամենը արժեքը (ամբողջ ժամկետ)',
+    propOnce: 'միանվագ',
+  },
+  ru: {
+    title: 'Mix Media · Прайс-лист',
+    nav: { bubuka: 'Bubuka', calc: 'Калькулятор', network: 'Сети', malls: 'ТЦ', contact: 'Контакты' },
+    live: 'Сейчас в эфире',
+    heroA: 'Ваша реклама звучит там, где', heroB: 'совершают покупки',
+    lead: 'Аудиореклама в супермаркетах и торговых центрах. Выберите место и пакет — стоимость увидите сразу.',
+    cta1: 'Выбрать место', cta2: 'Рассчитать стоимость',
+    stAddr: 'Точек вещания', stNets: 'Сетей магазинов', stSpots: 'Выходов в день на каждой точке', stCap: 'Максимум рекламодателей на точку',
+    step: 'Шаг',
+    whereT: ['Где вы хотите ', 'рекламироваться', ''], whereS: 'Выберите место — пакеты и расчёт обновятся автоматически.',
+    pnavSmp: 'Прайс SMP', pnavBubuka: 'Bubuka',
+    city: 'Yerevan City', malls: 'Торговые центры', other: 'Другие супермаркеты',
+    addrs: 'адресов', mallsN: 'ТЦ', netsN: 'сетей', points: 'точек',
+    choose: 'Выбрать', chooseLoc: 'Выбрать локации', chosen: 'Выбрано', add: 'Добавить', open: 'Открыть',
+    avail: c => `Доступно для ${c} компаний`, book: 'Забронируйте место сегодня 📌',
+    cityT: ['Пакеты ', 'Yerevan City', ''], smpT: ['Услуга ', 'вещания', ''],
+    mallT: ['Торговые ', 'центры', ''], mallS: 'Выберите количество выходов в день (15 или 30), чтобы увидеть стоимость пакета на 30 дней.',
+    month: 'Месячно', half: 'На 6 месяцев', year: 'Годовой', popular: 'Топ',
+    store: 'Магазин', storesN: n => `${n} магазинов`, all: 'все', airings: 'Выходов', perDay: n => `${n} в день`,
+    clip: 'Ролик', sec: 'сек',
+    per: { month: 'один магазин · в месяц', half: 'один магазин · 6 месяцев', year: 'один магазин · годовой' },
+    perMonthOf: { month: '/ мес', half: '/ мес · на 6 мес', year: '/ мес · годовой' },
+    monthlyWas: 'Помесячно:',
+    maxNote: n => `* Пакет Max включает все ${n} филиалов и 2 бесплатные аудиозаписи.`,
+    support: 'Техническая поддержка — весь срок',
+    term: 'Срок', oneMonth: '1 месяц', bPerDay: 'вых./день', mallPriceL: n => `Стоимость ${n} выходов в день (с НДС)`,
+    onReq: 'Цена по запросу', mo: 'мес', free: 'свободно', full: 'Мест нет',
+    whyE: 'Преимущества', whyT: ['Почему ', 'MIX MEDIA', ''], whyS: 'Всё для эффективности вашей рекламы.',
+    why: [['bolt', 'Быстро', 'Заказ в 3 шага'], ['report', 'Отчётность', 'Отчёты по выходам в эфир'],
+      ['headset', 'Поддержка', 'Мониторинг 24/7'], ['shield', 'Надёжно', 'Стабильный сервис']],
+    calcT: ['Ожидаемые ', 'результаты', ''], calcS: 'Выберите адреса и срок — сумма посчитается сразу.',
+    period: 'Срок', brand: 'Ваш бренд', brandPh: 'напр.: Mix Media, Yoga', contact: 'Контакт', contactPh: 'Имя, телефон',
+    addresses: 'Выбранные адреса', selected: 'выбрано', pickAddr: 'Выбрать адреса', editAddr: 'Добавить / изменить', clear: 'Сбросить',
+    cartEmpty: 'Адреса пока не выбраны', cartEmptyS: 'Выберите пакет или торговый центр выше, затем адреса.',
+    showAll: n => `Показать все ${n}`, hide: 'Скрыть', remove: 'Убрать',
+    studio: 'Услуги студии',
+    sumT: 'Ваш расчёт', total: 'Итого (с налогами)', sAir: 'Всего выходов', sPer: 'Стоимость 1 выхода', sAddr: 'Выбрано адресов', sDays: 'Дней',
+    byNet: 'По цене сети', byMall: 'По цене ТЦ', pkgL: 'Пакет', disc: 'Скидка', broadcast: 'Вещание', studioL: 'Студия', monthlyPrice: 'по месячной цене',
+    hint: 'Выберите пакет и адреса — расчёт появится здесь.',
+    pickPkg: 'Цена этих адресов — по пакету: выберите пакет выше (шаг 2).',
+    noPrice: 'Для части адресов цена по запросу — отправьте заявку, менеджер уточнит.',
+    note: 'Расчёт ознакомительный, итоговая цена — по договору.',
+    wa: 'WhatsApp', tg: 'Telegram', order: 'Оформить заказ', consult: 'Консультация',
+    tgCopied: 'Текст скопирован — вставьте в Telegram и нажмите «Send»', need: 'Выберите хотя бы один адрес', added: n => `Добавлено адресов: ${n} ✓`,
+    mTotal: 'Итого', mBtn: 'Расчёт',
+    mdlT: 'Выберите адреса', mdlChains: 'Выберите сеть вещания', mdlChainsS: 'Нажмите на сеть — адреса на следующем шаге',
+    search: 'Поиск по адресу…', searchNet: 'Поиск сети…', selAll: 'Отметить все', unselAll: 'Снять все', allDistricts: 'Все',
+    nothing: 'Ничего не найдено', selectedN: 'Выбрано:', confirm: 'Подтвердить', back: 'Назад', close: 'Закрыть',
+    partnersE: 'Партнёры', partnersT: ['Нам ', 'доверяют', ''],
+    netE: 'In-Store сеть', netT: ['Сеть вещания и ', 'активные места', ''],
+    netS: c => `Mix Media вещает в крупнейших супермаркетах и торговых центрах Армении. В каждой точке не больше ${c} рекламных мест — смотрите свободные места ниже.`,
+    subSmp: 'Супермаркеты', subMall: 'Торговый центр', freeOf: c => `свободных мест из ${c}`, lastPlaces: 'Последние места', pointsN: n => `${n} точек`,
+    ctaE: 'Контакты', ctaT: 'Обратная связь',
+    ctaS: 'Заполните форму, и наш специалист свяжется с вами. Если вы уже заполнили калькулятор, выбор автоматически уйдёт в Telegram.',
+    callUs: 'Позвоните', email: 'Эл. почта', writeNow: 'Написать',
+    fName: 'Имя', fPhone: 'Телефон', fCompany: 'Компания', fMsg: 'Сообщение', fSend: 'Отправить в Telegram',
+    fNeed: 'Заполните имя и телефон', callReq: 'Заказ звонка — Mix Media',
+    company: 'ООО «Микс Медиа»', address: 'Армения, Ереван, ул. Левоняна 48',
+    err: 'Не удалось загрузить цены. Позвоните нам: ',
+    reqT: 'Mix Media · Заявка', place: 'Место', months: 'мес.', theme: 'Тема',
+    propT: 'Готовое рекламное предложение', propDoc: 'Коммерческое предложение', propSlogan: 'Mix Media — Наш голос всегда слышен',
+    propPrint: 'Печать / PDF', propDate: 'Дата', propClient: 'Клиент', propN: '№', propNet: 'Сеть', propAddr: 'Адрес', propFreq: 'Част.',
+    propCost: 'Цена / мес', propAddon: 'Доп. услуга', propSum: 'Стоимость', propTotal: 'Итоговая стоимость (весь срок)',
+    propOnce: 'разово',
+  },
+};
+const T = k => I[lang][k];
+const DISTRICT_RU = {
+  'Կենտրոն': 'Центр', 'Արաբկիր': 'Арабкир', 'Աջափնյակ': 'Аджапняк', 'Ավան': 'Аван', 'Դավթաշեն': 'Давташен',
+  'Էրեբունի': 'Эребуни', 'Մալաթիա-Սեբաստիա': 'Малатия-Себастия', 'Նոր Նորք': 'Нор-Норк', 'Նորք-Մարաշ': 'Норк-Мараш',
+  'Նուբարաշեն': 'Нубарашен', 'Շենգավիթ': 'Шенгавит', 'Քանաքեռ-Զեյթուն': 'Канакер-Зейтун', 'Երևան': 'Ереван', 'Մարզեր': 'Регионы',
+};
+const dname = d => lang === 'ru' ? (DISTRICT_RU[d] || d || '') : (d || '');
+
+/* ================================================================ օգնականներ */
+const $ = s => document.querySelector(s);
+function h(tag, a, ...kids) {
+  const el = document.createElement(tag);
+  if (a) for (const k in a) {
+    const v = a[k];
+    if (v == null || v === false) continue;
+    if (k === 'class') el.className = v;
+    else if (k === 'text') el.textContent = v;
+    else if (k === 'style') el.style.cssText = v;
+    else if (k.startsWith('on') && typeof v === 'function') el.addEventListener(k.slice(2).toLowerCase(), v);
+    else if (typeof v === 'boolean' && k in el) el[k] = v;
+    else el.setAttribute(k, v === true ? '' : String(v));
+  }
+  for (const c of kids.flat(Infinity)) if (c != null && c !== false) el.append(c instanceof Node ? c : String(c));
+  return el;
+}
+const ICONS = {
+  arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+  store: '<path d="M3.5 10 5 4.8A1.2 1.2 0 0 1 6.2 4h11.6a1.2 1.2 0 0 1 1.2.8l1.5 5.2"/><path d="M3.5 10h17a3 3 0 0 1-5.7 1.3 3 3 0 0 1-5.6 0A3 3 0 0 1 3.5 10z"/><path d="M5 13v7h14v-7M10 20v-4.5h4V20"/>',
+  building: '<path d="M4 21V5.5A1.5 1.5 0 0 1 5.5 4h8A1.5 1.5 0 0 1 15 5.5V21"/><path d="M15 9h3.5A1.5 1.5 0 0 1 20 10.5V21M2.5 21h19M8 8h3M8 12h3M8 16h3"/>',
+  cart: '<path d="M3 4h2.2l2.3 11a1.8 1.8 0 0 0 1.8 1.4h7.9a1.8 1.8 0 0 0 1.8-1.4L20.5 8H6.3"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/>',
+  play: '<path d="M8 5.5v13l10.5-6.5z"/>',
+  clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+  pin: '<path d="M12 21.5s7-6.1 7-11.6a7 7 0 0 0-14 0c0 5.5 7 11.6 7 11.6z"/><circle cx="12" cy="10" r="2.6"/>',
+  mic: '<rect x="9" y="3" width="6" height="11.5" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/>',
+  wave: '<circle cx="12" cy="12" r="1.8"/><path d="M8.2 15.8a5.4 5.4 0 0 1 0-7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.3 18.7a9.5 9.5 0 0 1 0-13.4M18.7 5.3a9.5 9.5 0 0 1 0 13.4"/>',
+  shield: '<path d="M12 3l7.5 2.8v5.7c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V5.8z"/><path d="M9 12.2l2.1 2.1L15.3 10"/>',
+  phone: '<path d="M6.6 3.5h3l1.6 4.4-2.1 1.4a10.6 10.6 0 0 0 5.6 5.6l1.4-2.1 4.4 1.6v3a1.9 1.9 0 0 1-2 1.9A16.4 16.4 0 0 1 4.6 5.5a1.9 1.9 0 0 1 2-2z"/>',
+  chat: '<path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.2a8.5 8.5 0 1 1 15.6-4.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/>',
+  send: '<path d="M21 3 10.5 13.5M21 3l-6.5 18-4-7.5L3 9.5z"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/>',
+  copy: '<rect x="9" y="9" width="11.5" height="11.5" rx="2.5"/><path d="M5.5 15H5a1.5 1.5 0 0 1-1.5-1.5V5A1.5 1.5 0 0 1 5 3.5h8.5A1.5 1.5 0 0 1 15 5v.5"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/>',
+  chev: '<path d="m6 9 6 6 6-6"/>',
+  moon: '<path d="M20.5 13.5A8.5 8.5 0 1 1 10.5 3.5a6.6 6.6 0 0 0 10 10z"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/>',
+  spark: '<path d="M12 3.5 13.9 9l5.6 1.9-5.6 1.9L12 18.5l-1.9-5.7L4.5 10.9 10.1 9z"/>',
+  ext: '<path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/>',
+  tag: '<path d="M3.5 12.3V4.8a1.3 1.3 0 0 1 1.3-1.3h7.5l8.2 8.2a1.3 1.3 0 0 1 0 1.8l-7.5 7.5a1.3 1.3 0 0 1-1.8 0z"/><circle cx="8" cy="8" r="1.6"/>',
+  music: '<path d="M9 18V5.5l11-2V16"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
+  back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  x: '<path d="M6 6l12 12M18 6 6 18"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  doc: '<path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 13h6M9 16.5h4"/>',
+  headset: '<path d="M4.5 14v-2a7.5 7.5 0 0 1 15 0v2"/><rect x="3.5" y="13.5" width="4" height="6" rx="1.6"/><rect x="16.5" y="13.5" width="4" height="6" rx="1.6"/><path d="M18.5 19.5c0 1.2-2 2-5 2"/>',
+  print: '<path d="M7 8.5V3.5h10v5"/><rect x="3.5" y="8.5" width="17" height="8" rx="2"/><path d="M7 14h10v6.5H7z"/>',
+  bolt: '<path d="M13 2.5 4.5 13.5H11L10 21.5l8.5-11H12z"/>',
+  report: '<path d="M4 20.5h16"/><rect x="5.5" y="11" width="3" height="7" rx="1"/><rect x="10.5" y="6" width="3" height="12" rx="1"/><rect x="15.5" y="13.5" width="3" height="4.5" rx="1"/>',
+};
+function ic(name, size = 20, sw = 1.8) {
+  const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  for (const [k, v] of Object.entries({ viewBox: '0 0 24 24', width: size, height: size, fill: 'none', stroke: 'currentColor',
+    'stroke-width': sw, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'aria-hidden': 'true' })) s.setAttribute(k, v);
+  s.innerHTML = ICONS[name] || '';
+  return s;
+}
+const nf = v => new Intl.NumberFormat('ru-RU').format(Math.round(v || 0));
+const money = v => `${nf(v)} ֏`;
+const norm = s => String(s || '').toLowerCase().replace(/[․.,:;«»"'()\-–—/]+/g, ' ').replace(/\s+/g, ' ').trim();
+const shortAddr = s => String(s || '').replace(/^ք[.․]\s*Երևան,?\s+/, '');
+const PALETTE = ['#6B3DF0', '#2F8CFF', '#E8475F', '#0E9F9A', '#D97706', '#16A34A', '#DB2777', '#7C3AED', '#0284C7', '#EA580C'];
+const colorOf = s => { let x = 0; for (const c of String(s)) x = (x * 31 + c.charCodeAt(0)) >>> 0; return PALETTE[x % PALETTE.length]; };
+const initials = s => { const w = String(s).replace(/[«»"']/g, '').split(/[\s-]+/).filter(Boolean); return ((w[0] || '?')[0] + (w[1] ? w[1][0] : (w[0] || '').slice(1, 2))).toUpperCase(); };
+function logoEl(n, size = 40) {
+  const box = h('span', { class: 'logo', style: `width:${size}px;height:${size}px` });
+  const fb = () => { box.replaceChildren(initials(n.short || n.name)); box.classList.add('ini'); box.style.background = colorOf(n.name); box.style.fontSize = Math.round(size * .36) + 'px'; };
+  if (n.logo) { const img = h('img', { src: n.logo, alt: '', loading: 'lazy' }); img.addEventListener('error', fb); box.append(img); } else fb();
+  return box;
+}
+let toastTm;
+function toast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTm); toastTm = setTimeout(() => t.classList.remove('show'), 2600);
+}
+async function copy(txt) {
+  try { await navigator.clipboard.writeText(txt); return true; } catch (e) {
+    const ta = h('textarea', { style: 'position:fixed;left:-9999px;top:0' }); ta.value = txt; document.body.append(ta); ta.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch (e2) { ok = false; } ta.remove(); return ok;
+  }
+}
+/* թվի սահուն փոփոխություն */
+function tween(el, to, fmt = money, dur = 750) {
+  const from = el._v == null ? 0 : el._v;
+  el._v = to;
+  cancelAnimationFrame(el._raf);
+  if (reduced || from === to) { el.textContent = fmt(to); return; }
+  const t0 = performance.now();
+  const step = now => {
+    const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 4);
+    el.textContent = fmt(from + (to - from) * e);
+    if (p < 1) el._raf = requestAnimationFrame(step);
+  };
+  el._raf = requestAnimationFrame(step);
+}
+/* տեսադաշտ մտնելիս՝ հայտնվել */
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .12, rootMargin: '0px 0px -40px 0px' }) : null;
+function reveal(root = document) { root.querySelectorAll('.rv:not(.in)').forEach(el => (io && !reduced ? io.observe(el) : el.classList.add('in'))); }
+function secHead(stepN, title, sub, right) {
+  return h('div', { class: 'sh' },
+    h('div', { class: 'rv' }, h('span', { class: 'eyebrow', text: stepN }),
+      h('h2', { class: 'h2' }, title[0], h('em', { text: title[1] }), title[2]), sub ? h('p', { class: 'sub', text: sub }) : null),
+    right ? h('div', { class: 'rv', style: '--d:.12s' }, right) : null);
+}
+function seg(items, cur, onPick) {
+  const ind = h('span', { class: 'seg-ind', 'aria-hidden': 'true' });
+  const box = h('div', { class: 'seg', role: 'group' }, ind);
+  const btns = items.map(([id, label, badge]) => {
+    const b = h('button', { type: 'button', class: id === cur ? 'on' : '', 'aria-pressed': String(id === cur), onClick: () => { box.set(id); onPick(id); } },
+      label, badge ? h('span', { class: 'off', text: badge }) : null);
+    b.dataset.id = id; box.append(b); return b;
+  });
+  const place = () => { const b = btns.find(x => x.classList.contains('on')); if (!b || !b.offsetWidth) return; ind.style.width = b.offsetWidth + 'px'; ind.style.transform = `translateX(${b.offsetLeft}px)`; };
+  box.set = id => { btns.forEach(b => { const on = b.dataset.id === id; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); }); place(); };
+  if ('ResizeObserver' in window) new ResizeObserver(place).observe(box);
+  requestAnimationFrame(place);
+  return box;
+}
+
+/* ================================================================ տվյալներ և վիճակ */
+const D = { data: null };
+const S = { group: '', period: 'year', pkg: '', sel: new Set(), spots: new Map(), studio: new Set(), brand: '', contact: '',
+  m: { open: false, net: null, q: '', dist: '' }, cartOpen: new Set() };
+const R = {};
+const PERIOD_MONTHS = { month: 1, half: 6, year: 12 };
+const PKG_FIELD = { month: 'price', half: 'half', year: 'year' };
+const IMG = 'price-img/';
+const MALL_IMG = [[/մեգա|mega/i, 'megamall', 'MegaMall'], [/գարաժ|garage/i, 'garagemall', 'Garage Mall'],
+  [/էրեբունի|erebuni/i, 'erebunimall', 'Erebuni Mall'], [/ռիո|rio/i, 'riomall', 'Rio Mall']];
+const mallInfo = a => { const m = MALL_IMG.find(([rx]) => rx.test(a.address)); return m ? { img: IMG + m[1] + '.jpg', en: m[2] } : { img: '', en: '' }; };
+const cfg = () => D.data.config;
+const G = () => D.data.groups;
+const groupNets = (g = S.group) => (G()[g] || {}).networks || [];
+const packages = (g = S.group) => (cfg().groups[g] || {}).packages || [];
+const curPkg = () => packages().find(p => p.id === S.pkg) || null;
+const periods = (g = S.group) => (D.data.group_periods || {})[g] || ['month', 'half', 'year'];
+const key = (n, i) => `${n}:${i}`;
+const availKeys = nets => nets.flatMap(n => n.addresses.filter(a => a.free !== 0).map(a => key(n.index, a.i)));
+const groupName = g => T(g);
+const pname = p => T(p);
+const isMall = a => a && 'p15' in a;
+function addrIndex() { const m = new Map(); Object.values(G()).forEach(g => g.networks.forEach(n => n.addresses.forEach(a => m.set(key(n.index, a.i), { n, a })))); return m; }
+
+// նույնը, ինչ pricecalc.unit_price / pricelist.js
+function unitPrice(pkg, period, month) {
+  const own = pkg ? Number(pkg[PKG_FIELD[period]]) || 0 : 0;
+  return own || Math.round((month || 0) * (100 - (Number(cfg().discounts[period]) || 0)) / 100);
+}
+function fixPeriod() { if (!periods().includes(S.period)) S.period = periods().includes('year') ? 'year' : 'month'; }
+function totals() {
+  fixPeriod();
+  const months = PERIOD_MONTHS[S.period], pkg = curPkg(), idx = addrIndex();
+  const rows = [...S.sel].map(k => {
+    const x = idx.get(k);
+    if (!x) return null;
+    if (isMall(x.a)) {
+      const spots = S.spots.get(k) === 30 ? 30 : 15, month = spots === 30 ? x.a.p30 : x.a.p15;
+      return { ...x, k, spots, month, unit: unitPrice(null, S.period, month) };
+    }
+    const month = pkg ? pkg.price : (x.a.price || 0);
+    return { ...x, k, spots: pkg ? pkg.spots : cfg().spots, month, unit: unitPrice(pkg, S.period, month) };
+  }).filter(Boolean);
+  const subtotal = rows.reduce((s, x) => s + x.month, 0) * months;
+  const broadcast = rows.reduce((s, x) => s + x.unit, 0) * months;
+  const discount = subtotal - broadcast;
+  const studio = cfg().studio.filter(s => S.studio.has(s.id));
+  const studioSum = studio.reduce((s, x) => s + (Number(x.price) || 0), 0);
+  const days = months * D.data.days_in_month;
+  const airings = rows.reduce((s, x) => s + x.spots, 0) * days;
+  return { months, pkg, rows, subtotal, broadcast, discount, pct: subtotal ? Math.round(discount * 100 / subtotal) : 0,
+    studio, studioSum, days, airings, total: broadcast + studioSum, perSpot: airings ? Math.round(broadcast / airings) : 0 };
+}
+const scrollToId = id => setTimeout(() => document.getElementById(id).scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' }), 120);
+
+/* ================================================================ nav */
+function renderNav() {
+  const dark = () => { const t = document.documentElement.dataset.theme; return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; };
+  const themeBtn = h('button', { class: 'ibtn', type: 'button', title: T('theme'), 'aria-label': T('theme'), onClick: () => {
+    const next = dark() ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next; mem.set('mm-price-theme', next);
+    themeBtn.replaceChildren(ic(next === 'dark' ? 'sun' : 'moon', 18));
+  } }, ic(dark() ? 'sun' : 'moon', 18));
+  const nav = T('nav');
+  const c = D.data ? cfg() : { phone: '+374 44 702 703' };
+  $('#nav').replaceChildren(h('div', { class: 'nav-in' },
+    h('a', { class: 'brand', href: '#top', 'aria-label': 'Mix Media' }, h('img', { src: 'logo.png', alt: 'Mix Media' })),
+    h('nav', { class: 'links' },
+      h('a', { href: 'https://bubuka.am/', target: '_blank', rel: 'noopener' }, nav.bubuka, ic('ext', 13, 2.2)),
+      h('a', { href: '#calc', 'data-sec': 'calc', text: nav.calc }),
+      h('a', { href: '#network', 'data-sec': 'network', text: nav.network }),
+      h('a', { href: '#packages', 'data-sec': 'malls', text: nav.malls, onClick: e => { if (!D.data || !G().malls || !G().malls.count) return; e.preventDefault(); pickGroup('malls'); } }),
+      h('a', { href: '#contact', 'data-sec': 'contact', text: nav.contact })),
+    h('div', { class: 'nav-r' },
+      h('div', { class: 'lang', role: 'group', 'aria-label': 'Language' },
+        ...[['hy', 'HY'], ['ru', 'RU']].map(([l, label]) => h('button', { type: 'button', class: lang === l ? 'on' : '', 'aria-pressed': String(lang === l),
+          onClick: () => setLang(l) }, label))),
+      themeBtn,
+      h('a', { class: 'btn btn-p btn-sm mag', href: `tel:${String(c.phone).replace(/[^\d+]/g, '')}`, 'aria-label': c.phone }, ic('phone', 16, 2), h('span', { text: c.phone })))));
+}
+
+/* ================================================================ hero */
+function renderHero() {
+  let i = 0;
+  const words = (s, cls) => s.split(' ').filter(Boolean).map(w => h('span', { class: 'w' }, h('span', { class: cls || null, style: `--i:${i++}` }, w)));
+  const join = arr => arr.flatMap((x, k) => (k ? [' ', x] : [x]));
+  R.stats = h('div', { class: 'stats' });
+  $('#heroIn').replaceChildren(
+    h('div', { class: 'live' }, h('b'), h('span', { class: 'eq', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), h('i'), h('i')), T('live')),
+    h('h1', { class: 'h1' }, join([...words(T('heroA')), ...words(T('heroB'), 'gt')])),
+    h('p', { class: 'lead', text: T('lead') }),
+    h('div', { class: 'hero-cta' },
+      h('a', { class: 'btn btn-p mag', href: '#where', 'data-cursor': T('cta1') }, T('cta1'), ic('arrow', 18, 2.2)),
+      h('a', { class: 'btn btn-g mag', href: '#calc' }, T('cta2'))),
+    R.stats);
+  renderStats();
+}
+function renderStats() {
+  if (!R.stats) return;
+  const d = D.data;
+  const all = d ? Object.values(d.groups) : [];
+  const items = [
+    [d ? all.reduce((s, g) => s + g.count, 0) : null, T('stAddr')],
+    [d ? all.reduce((s, g) => s + g.nets, 0) : null, T('stNets')],
+    [d ? d.config.spots : null, T('stSpots')],
+    [d ? d.capacity : null, T('stCap')],
+  ];
+  R.stats.replaceChildren(...items.map(([v, label]) => {
+    const b = h('b', { text: v == null ? '—' : '0' });
+    if (v != null) setTimeout(() => tween(b, v, nf, 1800), 900);
+    return h('div', { class: 'stat' }, b, h('span', { text: label }));
+  }));
+}
+
+/* ալիքներ՝ ձայնի ալիք, որը արձագանքում է կուրսորին */
+function waves() {
+  const cv = $('#wave'), hero = $('#top');
+  const ctx = cv.getContext('2d');
+  if (!ctx) return;
+  let w = 0, ht = 0, t = 0, raf = 0, visible = true;
+  const m = { x: .5, y: .6, tx: .5, ty: .6, boost: 0, tb: 0 };
+  const lines = [
+    { c: '47,140,255', a: .7, amp: 46, f: 1.05, s: .9, o: 0, lw: 2.2 },
+    { c: '107,61,240', a: .85, amp: 64, f: .75, s: .7, o: 1.7, lw: 2.6 },
+    { c: '198,87,255', a: .6, amp: 38, f: 1.55, s: 1.15, o: 3.1, lw: 1.8 },
+    { c: '25,195,166', a: .4, amp: 30, f: 2.05, s: 1.45, o: 4.2, lw: 1.4 },
+    { c: '255,255,255', a: .22, amp: 74, f: .55, s: .5, o: 5.5, lw: 1.1 },
+    { c: '143,208,255', a: .3, amp: 22, f: 2.6, s: 1.9, o: 2.4, lw: 1 },
+  ];
+  const resize = () => {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    w = cv.clientWidth; ht = cv.clientHeight;
+    cv.width = Math.round(w * dpr); cv.height = Math.round(ht * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  const draw = () => {
+    ctx.clearRect(0, 0, w, ht);
+    ctx.globalCompositeOperation = 'lighter';
+    const mid = ht * .55, scale = Math.min(1, w / 1100) * .7 + .3;
+    for (const L of lines) {
+      ctx.beginPath();
+      for (let x = 0; x <= w + 6; x += 6) {
+        const nx = x / w;
+        const focus = Math.exp(-Math.pow((nx - m.x) / .2, 2));
+        const env = (.32 + focus * (1.1 + m.boost * 1.4) * (1.25 - m.y * .6)) * Math.sin(Math.PI * Math.min(1, Math.max(0, nx)));
+        const y = mid + env * L.amp * scale * (Math.sin(nx * Math.PI * 4 * L.f + t * L.s * 2.6 + L.o) * .68
+          + Math.sin(nx * Math.PI * 6.6 * L.f - t * L.s * 1.7 + L.o * 1.3) * .32);
+        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      const g = ctx.createLinearGradient(0, 0, w, 0);
+      g.addColorStop(0, `rgba(${L.c},0)`); g.addColorStop(.25, `rgba(${L.c},${L.a * .6})`);
+      g.addColorStop(.5, `rgba(${L.c},${L.a})`); g.addColorStop(.75, `rgba(${L.c},${L.a * .6})`); g.addColorStop(1, `rgba(${L.c},0)`);
+      ctx.strokeStyle = g; ctx.lineWidth = L.lw; ctx.stroke();
+    }
+    ctx.globalCompositeOperation = 'source-over';
+  };
+  const frame = () => {
+    t += .011;
+    m.x += (m.tx - m.x) * .05; m.y += (m.ty - m.y) * .05; m.boost += (m.tb - m.boost) * .04; m.tb *= .97;
+    draw();
+    raf = visible && !document.hidden ? requestAnimationFrame(frame) : 0;
+  };
+  const start = () => { if (!raf && !reduced && visible && !document.hidden) raf = requestAnimationFrame(frame); };
+  resize(); draw();
+  addEventListener('resize', () => { resize(); draw(); }, { passive: true });
+  if (reduced) return;
+  hero.addEventListener('pointermove', e => {
+    const r = hero.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+    m.tx = px;
+    const cr = cv.getBoundingClientRect();
+    m.ty = Math.min(1, Math.max(0, (e.clientY - cr.top) / cr.height));
+    hero.style.setProperty('--hx', `${(px * 100).toFixed(1)}%`); hero.style.setProperty('--hy', `${(py * 100).toFixed(1)}%`);
+    hero.style.setProperty('--px', (px - .5).toFixed(3)); hero.style.setProperty('--py', (py - .5).toFixed(3));
+  }, { passive: true });
+  hero.addEventListener('pointerleave', () => { m.tx = .5; m.ty = .6; hero.style.setProperty('--px', 0); hero.style.setProperty('--py', 0); });
+  hero.addEventListener('pointerdown', () => { m.tb = 1; });
+  if (io) new IntersectionObserver(es => { visible = es[0].isIntersecting; start(); }).observe(hero);
+  document.addEventListener('visibilitychange', start);
+  start();
+}
+
+/* ================================================================ 1. որտեղ գովազդել */
+function renderLocs() {
+  const g = G();
+  const cards = [
+    ['city', h('img', { src: IMG + 'yerevancity.jpg', alt: 'Yerevan City', class: 'cover' }), `${nf(g.city ? g.city.count : 0)} ${T('addrs')}`, g.city ? g.city.count : 0],
+    ['malls', ic('building', 30), `${nf(g.malls ? g.malls.count : 0)} ${T('mallsN')}`, g.malls ? g.malls.count : 0],
+    ['other', ic('cart', 30), `${nf(g.other ? g.other.nets : 0)} ${T('netsN')} / ${nf(g.other ? g.other.count : 0)} ${T('points')}`, g.other ? g.other.nets : 0],
+  ];
+  const pnav = h('nav', { class: 'pnav', 'aria-label': 'Mix Media' },
+    h('span', { class: 'on' }, ic('tag', 15, 2), T('pnavSmp')),
+    h('a', { href: 'https://bubuka.am/', target: '_blank', rel: 'noopener' }, ic('music', 15, 2), T('pnavBubuka'), ic('ext', 12, 2.2)));
+  $('#where').replaceChildren(h('div', { class: 'wrap' },
+    secHead(`${T('step')} 1`, T('whereT'), T('whereS'), pnav),
+    h('div', { class: 'locs' }, ...cards.map(([id, icon, cnt, big], k) => h('div', { class: 'rv', style: `--d:${k * .1}s` },
+      h('button', { type: 'button', class: `loc spot tilt${S.group === id ? ' on' : ''}`, 'aria-disabled': g[id] && g[id].count ? null : 'true',
+        'aria-pressed': String(S.group === id), 'data-cursor': S.group === id ? T('chosen') : T('choose'),
+        onClick: () => { if (g[id] && g[id].count) pickGroup(id); } },
+      h('span', { class: 'loc-num', 'aria-hidden': 'true', text: nf(big) }),
+      h('span', { class: `loc-ic${id === 'city' ? ' photo' : ''}` }, icon),
+      h('span', { class: 'loc-t', text: groupName(id) }),
+      h('span', { class: 'loc-c', text: cnt }),
+      h('span', { class: 'loc-go' }, ic(S.group === id ? 'check' : 'arrow', 20, 2.2))))))));
+  reveal($('#where'));
+}
+function pickGroup(id) {
+  if (S.group !== id) {
+    S.group = id; S.pkg = ''; S.sel = new Set(); S.spots = new Map(); S.cartOpen = new Set();
+    fixPeriod();
+    renderLocs(); renderPkgs(); renderCalc();
+  }
+  scrollToId('packages');
+}
+
+/* ================================================================ 2. փաթեթներ / մոլեր */
+function promo() {
+  return h('div', { class: 'promo' }, h('span', { class: 'promo-a' }, h('b'), T('avail')(D.data.capacity)), h('span', { class: 'promo-b', text: T('book') }));
+}
+function periodSeg() {
+  const save = m => {
+    const best = Math.max(0, ...packages().map(p => (p.price ? Math.round((1 - unitPrice(p, m, p.price) / p.price) * 100) : 0)),
+      packages().length ? 0 : Number(cfg().discounts[m]) || 0);
+    return best ? `−${best}%` : '';
+  };
+  const s = seg(periods().map(p => [p, pname(p), save(p)]), S.period, setPeriod);
+  (R.segs = R.segs || []).push(s);
+  return s;
+}
+function setPeriod(p) {
+  S.period = p;
+  (R.segs || []).forEach(s => s.isConnected && s.set(p));
+  updatePkgPrices(); updateMallPrices(); updateSum();
+}
+function renderPkgs() {
+  R.segs = []; R.pkgCards = []; R.mallCards = [];
+  const sec = $('#packages');
+  if (S.group === 'malls') { renderMalls(sec); return; }
+  const list = packages();
+  const city = S.group === 'city';
+  const count = (G()[S.group] || {}).count || 0;
+  const grid = h('div', { class: 'pkgs' });
+  list.forEach((p, k) => {
+    const num = h('span'), old = h('div', { class: 'pkg-old' }), per = h('div', { class: 'pkg-per' }), x = h('div', { class: 'pkg-x' });
+    const btn = h('button', { type: 'button', class: 'btn' });
+    const feat = (icon, label, val) => h('li', {}, ic(icon, 19), label, h('b', { text: val }));
+    const note = lang === 'ru' ? (p.note_ru || p.note) : p.note;
+    const sub = [note, p.locations ? T('storesN')(nf(p.locations)) : T('storesN')(nf(count))].filter(Boolean).join(' · ');
+    const card = h('article', { class: `pkg spot tilt${p.popular ? ' pop' : ''}`, onClick: () => choose(p) },
+      h('div', { class: 'pkg-top' }, h('span', { class: 'pkg-ic' }, city ? h('img', { src: IMG + 'yerevancity.jpg', alt: '' }) : p.icon || '⚡'),
+        h('span', { class: 'pkg-name', text: p.name }), p.popular ? h('span', { class: 'pkg-badge', text: T('popular') }) : null),
+      h('div', { class: 'pkg-note', text: sub }),
+      h('div', { class: 'pkg-price' }, old, h('div', { class: 'pkg-num' }, num, h('small', { text: '֏' })), per, x),
+      h('ul', { class: 'pkg-f' },
+        feat('store', T('store'), p.locations ? nf(p.locations) : `${T('all')} ${nf(count)}`),
+        feat('clock', T('clip'), `${p.clip} ${T('sec')}`),
+        feat('play', T('airings'), T('perDay')(p.spots))),
+      btn);
+    R.pkgCards.push({ p, card, num, old, per, x, btn });
+    grid.append(h('div', { class: 'rv', style: `--d:${k * .1}s` }, card));
+  });
+  const maxPkg = city && list.find(p => !p.locations);
+  sec.replaceChildren(h('div', { class: 'wrap' },
+    secHead(`${T('step')} 2`, city ? T('cityT') : T('smpT'), null, periodSeg()),
+    h('div', { class: 'rv' }, promo()),
+    list.length ? grid : h('div', { class: 'empty', text: T('onReq') }),
+    maxPkg ? h('p', { class: 'fnote rv', text: T('maxNote')(nf(count)) }) : null,
+    h('div', { class: 'support rv' }, ic('shield', 20), T('support'))));
+  updatePkgPrices(true); updatePkgSel();
+  reveal(sec);
+}
+function updatePkgPrices(instant) {
+  (R.pkgCards || []).forEach(({ p, num, old, per, x }) => {
+    const now = unitPrice(p, S.period, p.price);
+    if (instant) { num._v = now; num.textContent = nf(now); } else tween(num, now, nf, 650);
+    old.textContent = now < p.price ? `${T('monthlyWas')} ${money(p.price)}` : '';
+    per.textContent = S.group === 'city' ? T('per')[S.period] : T('perMonthOf')[S.period];
+    const n = (G()[S.group] || {}).count || 0;
+    x.textContent = !p.locations && n ? `×${nf(n)} · (${money(now * n)})` : '';
+  });
+}
+function updatePkgSel() {
+  (R.pkgCards || []).forEach(({ p, card, btn }) => {
+    const on = S.pkg === p.id;
+    card.classList.toggle('on', on);
+    card.dataset.cursor = on ? T('chosen') : (p.locations ? T('chooseLoc') : T('choose'));
+    btn.className = `btn ${on ? 'btn-sel' : (p.popular ? 'btn-w' : 'btn-p')}`;
+    btn.setAttribute('aria-pressed', String(on));
+    const arrow = ic('arrow', 18, 2.2);
+    arrow.classList.add('go');
+    btn.replaceChildren(...(on ? [ic('check', 18, 2.4), T('chosen')] : [p.locations ? T('chooseLoc') : T('choose'), arrow]));
+  });
+}
+function choose(p) {
+  S.pkg = p.id;
+  updatePkgSel();
+  if (!p.locations) {                          // Max՝ ամբողջ ցանցը
+    const keys = availKeys(groupNets());
+    S.sel = new Set(keys);
+    renderCart(); updateSum(); toast(T('added')(keys.length));
+    scrollToId('calc');
+    return;
+  }
+  renderCart(); updateSum();
+  openModal();
+}
+
+/* մոլեր՝ յուրաքանչյուրը իր գնով, 15 կամ 30 եթեր օրական */
+function renderMalls(sec) {
+  const grid = h('div', { class: 'malls' });
+  groupNets().forEach(n => n.addresses.forEach((a, k) => {
+    const kk = key(n.index, a.i), info = mallInfo(a);
+    const price = h('b', { class: 'mall-pr' }), lbl = h('small');
+    const tog = h('div', { class: 'mall-tog', role: 'group' }, ...[15, 30].map(s => h('button', { type: 'button', 'data-s': s,
+      onClick: e => { e.stopPropagation(); S.spots.set(kk, s); if (!S.sel.has(kk) && a.free !== 0) S.sel.add(kk); updateMallPrices(); renderCart(); updateSum(); } },
+    h('b', { text: s }), h('span', { text: T('bPerDay') }))));
+    const btn = h('span', { class: 'mall-ck' }, ic('check', 16, 2.8));
+    const card = h('article', { class: `mall spot tilt${a.free === 0 ? ' full' : ''}`, tabindex: '0', role: 'button', onClick: () => toggleMall(kk, a),
+      onKeydown: e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMall(kk, a); } } },
+    h('div', { class: 'mall-ph' }, info.img ? h('img', { src: info.img, alt: info.en || a.address, loading: 'lazy' }) : ic('building', 48, 1.4),
+      h('span', { class: 'mall-free', text: a.free === 0 ? T('full') : `${a.free} ${T('free')}` }), btn),
+    h('div', { class: 'mall-b' },
+      h('h3', { text: info.en || a.address }), h('div', { class: 'mall-sub', text: info.en ? a.address : dname(a.district) }),
+      h('div', { class: 'mall-term' }, ic('clock', 15, 2), `${T('term')}՝ `, h('b', { text: T('oneMonth') })),
+      tog, lbl, price));
+    R.mallCards.push({ kk, a, card, tog, price, lbl });
+    grid.append(h('div', { class: 'rv', style: `--d:${k * .08}s` }, card));
+  }));
+  sec.replaceChildren(h('div', { class: 'wrap' },
+    secHead(`${T('step')} 2`, T('mallT'), T('mallS'), periods().length > 1 ? periodSeg() : null),
+    h('div', { class: 'rv' }, promo()),
+    grid,
+    h('div', { class: 'support rv' }, ic('shield', 20), T('support'))));
+  updateMallPrices(true);
+  reveal(sec);
+}
+function toggleMall(kk, a) {
+  if (S.sel.has(kk)) S.sel.delete(kk);
+  else if (a.free !== 0) { S.sel.add(kk); toast(T('added')(1)); }
+  updateMallPrices(); renderCart(); updateSum();
+}
+function updateMallPrices(instant) {
+  (R.mallCards || []).forEach(({ kk, a, card, tog, price, lbl }) => {
+    const s = S.spots.get(kk) === 30 ? 30 : 15, on = S.sel.has(kk);
+    tog.querySelectorAll('button').forEach(b => b.classList.toggle('on', Number(b.dataset.s) === s));
+    const v = unitPrice(null, S.period, s === 30 ? a.p30 : a.p15);
+    lbl.textContent = T('mallPriceL')(s);
+    if (!v) { price.textContent = T('onReq'); price._v = 0; } else if (instant) { price._v = v; price.textContent = money(v); } else tween(price, v, money, 600);
+    card.classList.toggle('on', on);
+    card.dataset.cursor = on ? T('chosen') : T('choose');
+  });
+}
+
+/* ================================================================ հասցեների պատուհան (փաթեթ → ցանց → հասցեներ՝ թաղամասերով) */
+function openModal(net) {
+  const nets = groupNets();
+  S.m = { open: true, net: net != null ? net : (nets.length === 1 ? nets[0].index : null), q: '', dist: '' };
+  if (!R.mdl) {
+    R.mdl = h('div', { class: 'mdl', role: 'dialog', 'aria-modal': 'true', onClick: e => { if (e.target === R.mdl) closeModal(); } });
+    document.body.append(R.mdl);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && S.m.open) closeModal(); });
+  }
+  document.documentElement.classList.add('lock');
+  R.mdl.classList.add('show');
+  drawModal();
+}
+function closeModal() {
+  S.m.open = false;
+  R.mdl.classList.remove('show');
+  document.documentElement.classList.remove('lock');
+  renderCart(); updateSum(); updateMallPrices();
+}
+function drawModal() {
+  const nets = groupNets(), pkg = curPkg();
+  const net = nets.find(n => n.index === S.m.net);
+  const head = h('div', { class: 'mdl-h' },
+    net && nets.length > 1 ? h('button', { type: 'button', class: 'ibtn2', 'aria-label': T('back'), onClick: () => { S.m.net = null; S.m.q = ''; S.m.dist = ''; drawModal(); } }, ic('back', 18, 2.2)) : null,
+    h('div', { class: 'mdl-tt' },
+      pkg ? h('span', { class: 'mdl-pkg', text: `${pkg.name} · ${money(unitPrice(pkg, S.period, pkg.price))} ${T('perMonthOf')[S.period]}` }) : null,
+      h('h3', { text: net ? T('mdlT') : T('mdlChains') }),
+      h('small', { text: net ? net.short : T('mdlChainsS') })),
+    h('button', { type: 'button', class: 'ibtn2', 'aria-label': T('close'), onClick: closeModal }, ic('x', 18, 2.2)));
+  const body = h('div', { class: 'mdl-b' });
+  const foot = h('div', { class: 'mdl-f' });
+  const q = h('input', { class: 'inp', type: 'search', value: S.m.q, placeholder: net ? T('search') : T('searchNet'), 'aria-label': T('search') });
+  let qt; q.addEventListener('input', () => { clearTimeout(qt); qt = setTimeout(() => { S.m.q = q.value; drawList(); }, 150); });
+  const tools = h('div', { class: 'tools' }, h('div', { class: 'search' }, ic('search', 18), q));
+  const chips = h('div', { class: 'chips' });
+  const list = h('div');
+  if (net) {
+    const all = h('button', { type: 'button', class: 'tbtn' });
+    all.addEventListener('click', () => {
+      const keys = availKeys([{ index: net.index, addresses: visAddrs(net) }]);
+      const on = keys.length && keys.every(k => S.sel.has(k));
+      keys.forEach(k => (on ? S.sel.delete(k) : S.sel.add(k)));
+      drawList();
+    });
+    tools.append(all);
+    R.mAll = all;
+    const ds = [...new Set(net.addresses.map(a => a.district).filter(Boolean))];
+    if (ds.length > 1) chips.append(...['', ...ds].map(d => h('button', { type: 'button', class: `chip${S.m.dist === d ? ' on' : ''}`,
+      onClick: () => { S.m.dist = d; chips.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c.dataset.d === d)); drawList(); },
+      'data-d': d }, d ? dname(d) : T('allDistricts'), h('i', { text: nf(d ? net.addresses.filter(a => a.district === d).length : net.addresses.length) }))));
+  }
+  function drawList() {
+    if (!net) {
+      const needle = norm(S.m.q);
+      const vis = nets.filter(n => !needle || norm(`${n.short} ${n.name}`).includes(needle));
+      list.replaceChildren(vis.length ? h('div', { class: 'ncards' }, ...vis.map(n => {
+        const c = n.addresses.filter(a => S.sel.has(key(n.index, a.i))).length;
+        const free = n.addresses.filter(a => a.free !== 0).length;
+        return h('button', { type: 'button', class: `ncard spot${c ? ' on' : ''}`, 'data-cursor': T('open'), onClick: () => { S.m.net = n.index; S.m.q = ''; S.m.dist = ''; drawModal(); } },
+          h('div', { class: 'ncard-h' }, logoEl(n, 46), h('div', {}, h('b', { text: n.short }), h('small', { text: `${nf(n.addresses.length)} ${T('addrs')} · ${nf(free)} ${T('free')}` }))),
+          h('div', { class: 'ncard-p' }, h('span', { text: c ? `${nf(c)} ${T('selected')}` : T('choose') }), ic('arrow', 18, 2.2)));
+      })) : h('div', { class: 'empty', text: T('nothing') }));
+    } else {
+      const vis = visAddrs(net);
+      list.replaceChildren(vis.length ? h('div', { class: 'agrid m' }, ...vis.map(a => {
+        const k = key(net.index, a.i), full = a.free === 0, on = S.sel.has(k);
+        const b = h('button', { type: 'button', class: `addr${on ? ' on' : ''}${full ? ' full' : ''}`, 'aria-pressed': String(on), title: a.address,
+          'aria-disabled': full && !on ? 'true' : null, onClick: () => {
+            if (full && !S.sel.has(k)) return;
+            S.sel.has(k) ? S.sel.delete(k) : S.sel.add(k);
+            const now = S.sel.has(k); b.classList.toggle('on', now); b.setAttribute('aria-pressed', String(now)); syncFoot();
+          } },
+        h('span', { class: 'addr-ck' }, ic('check', 13, 3)),
+        h('span', { class: 'addr-t' }, h('span', { text: shortAddr(a.address) }),
+          h('small', { text: full ? T('full') : [dname(a.district), `${a.free} ${T('free')}`].filter(Boolean).join(' · ') })));
+        return b;
+      })) : h('div', { class: 'empty', text: T('nothing') }));
+    }
+    syncFoot();
+  }
+  function syncFoot() {
+    const r = totals();
+    if (net && R.mAll) {
+      const keys = availKeys([{ index: net.index, addresses: visAddrs(net) }]);
+      R.mAll.textContent = keys.length && keys.every(k => S.sel.has(k)) ? T('unselAll') : T('selAll');
+    }
+    foot.replaceChildren(
+      h('div', { class: 'mdl-cnt' }, T('selectedN'), ' ', h('b', { text: nf(r.rows.length) }), ' ', T('addrs'),
+        r.broadcast ? h('em', { text: ` · ${money(r.broadcast)}` }) : null),
+      h('button', { type: 'button', class: 'btn btn-p mag', onClick: () => { closeModal(); if (r.rows.length) scrollToId('calc'); } }, ic('check', 18, 2.4), T('confirm')));
+  }
+  body.append(...[tools, chips.children.length ? chips : null, list].filter(Boolean));
+  R.mdl.replaceChildren(h('div', { class: 'mdl-box' }, head, body, foot));
+  drawList();
+  if (fine) setTimeout(() => q.focus({ preventScroll: true }), 60);
+}
+function visAddrs(net) {
+  const needle = norm(S.m.q);
+  return net.addresses.filter(a => (!S.m.dist || a.district === S.m.dist) && (!needle || norm(`${a.address} ${dname(a.district)}`).includes(needle)));
+}
+
+/* ================================================================ 3. կանխատեսվող արդյունքներ */
+function renderCalc() {
+  const c = cfg();
+  const brand = h('input', { class: 'inp', type: 'text', value: S.brand, placeholder: T('brandPh'), autocomplete: 'organization' });
+  const contact = h('input', { class: 'inp', type: 'text', value: S.contact, placeholder: T('contactPh'), autocomplete: 'tel' });
+  brand.addEventListener('input', () => { S.brand = brand.value; });
+  contact.addEventListener('input', () => { S.contact = contact.value; });
+  R.cart = h('div', { class: 'cart' });
+  R.selCnt = h('span', { class: 'cnt' });
+  const stus = h('div', { class: 'stus' }, ...c.studio.map(s => {
+    const b = h('button', { type: 'button', class: `stu${S.studio.has(s.id) ? ' on' : ''}`, 'aria-pressed': String(S.studio.has(s.id)), onClick: () => {
+      S.studio.has(s.id) ? S.studio.delete(s.id) : S.studio.add(s.id);
+      b.classList.toggle('on'); b.setAttribute('aria-pressed', String(S.studio.has(s.id))); updateSum();
+    } }, h('span', { class: 'stu-sw' }), h('span', { text: lang === 'ru' ? (s.name_ru || s.name) : s.name }), h('b', { text: `+${money(s.price)}` }));
+    return b;
+  }));
+  const panel = h('div', { class: 'panel rv' },
+    h('div', { class: 'blk' }, h('div', { class: 'lbl', text: T('period') }), periodSeg()),
+    h('div', { class: 'blk two' },
+      h('label', { class: 'field' }, h('span', { text: T('brand') }), brand),
+      h('label', { class: 'field' }, h('span', { text: T('contact') }), contact)),
+    h('div', { class: 'blk' }, h('div', { class: 'lbl' }, ic('pin', 16, 2), T('addresses'), R.selCnt), R.cart),
+    c.studio.length ? h('div', { class: 'blk' }, h('div', { class: 'lbl' }, ic('mic', 16, 2), T('studio')), stus) : null);
+  R.sum = renderSum();
+  $('#calc').replaceChildren(h('div', { class: 'wrap' },
+    secHead(`${T('step')} 3`, T('calcT'), T('calcS')),
+    h('div', { class: 'calc' }, panel, h('div', { class: 'rv sum-wrap', style: '--d:.12s' }, R.sum))));
+  renderCart(); updateSum();
+  reveal($('#calc'));
+}
+function pickAddresses() {
+  if (S.group === 'malls') { scrollToId('packages'); return; }
+  if (!curPkg() && packages().length) { toast(T('pickPkg')); scrollToId('packages'); return; }
+  openModal();
+}
+function renderCart() {
+  if (!R.cart) return;
+  const r = totals();
+  const tools = h('div', { class: 'cart-tools' },
+    h('button', { type: 'button', class: 'tbtn', onClick: pickAddresses }, ic(r.rows.length ? 'plus' : 'pin', 17, 2.2), r.rows.length ? T('editAddr') : T('pickAddr')),
+    r.rows.length ? h('button', { type: 'button', class: 'tbtn ghost', onClick: () => { S.sel.clear(); renderCart(); updateMallPrices(); updateSum(); } }, T('clear')) : null);
+  if (!r.rows.length) {
+    R.cart.replaceChildren(h('div', { class: 'cart-empty' }, h('span', { class: 'cart-ic' }, ic('cart', 26, 1.7)),
+      h('b', { text: T('cartEmpty') }), h('small', { text: T('cartEmptyS') })), tools);
+    return;
+  }
+  const byNet = new Map();
+  r.rows.forEach(x => { if (!byNet.has(x.n.index)) byNet.set(x.n.index, { n: x.n, rows: [] }); byNet.get(x.n.index).rows.push(x); });
+  const LIMIT = 8;
+  const groups = [...byNet.values()].map(({ n, rows }) => {
+    const open = S.cartOpen.has(n.index) || rows.length <= LIMIT;
+    const sum = rows.reduce((s, x) => s + x.unit, 0);
+    const shown = open ? rows : rows.slice(0, LIMIT);
+    return h('div', { class: 'cart-net' },
+      h('div', { class: 'cart-h' }, logoEl(n, 34), h('b', { text: n.short }), h('small', { text: `${nf(rows.length)} ${T('addrs')}` }),
+        h('em', { text: sum ? `${money(sum)} ${T('perMonthOf').month}` : T('onReq') })),
+      h('div', { class: 'cart-chips' }, ...shown.map(x => h('span', { class: 'chipx' },
+        h('span', { text: isMall(x.a) ? `${mallInfo(x.a).en || x.a.address} · ${x.spots} ${T('bPerDay')}` : shortAddr(x.a.address) }),
+        h('button', { type: 'button', 'aria-label': T('remove'), title: T('remove'), onClick: () => { S.sel.delete(x.k); renderCart(); updateMallPrices(); updateSum(); } }, ic('x', 13, 2.6)))),
+      rows.length > LIMIT ? h('button', { type: 'button', class: 'chipx more', onClick: () => {
+        S.cartOpen.has(n.index) ? S.cartOpen.delete(n.index) : S.cartOpen.add(n.index); renderCart();
+      } }, open ? T('hide') : T('showAll')(nf(rows.length))) : null));
+  });
+  R.cart.replaceChildren(...groups, tools);
+}
+
+/* ամփոփում */
+function renderSum() {
+  R.sGroup = h('span', { class: 'pill' });
+  R.sPkg = h('div', { class: 'sum-pkg' });
+  R.sTotal = h('div', { class: 'sum-total' });
+  R.sDisc = h('div', { class: 'sum-disc' });
+  R.sAir = h('b'); R.sPer = h('b'); R.sAddr = h('b'); R.sDays = h('b');
+  R.sLines = h('div', { class: 'sum-lines' });
+  R.sHint = h('p', { class: 'sum-hint', text: T('hint') });
+  const need = () => { if (!S.sel.size) { toast(T('need')); return false; } return true; };
+  const waNum = String(cfg().whatsapp || cfg().phone || '').replace(/\D/g, '');
+  return h('aside', { class: 'sum', id: 'sum' },
+    h('div', { class: 'sum-h' }, h('b', { text: T('sumT') }), R.sGroup),
+    R.sPkg,
+    h('div', { class: 'sum-k', text: T('total') }), R.sTotal, R.sDisc,
+    h('div', { class: 'sum-grid' },
+      h('div', {}, R.sAir, h('span', { text: T('sAir') })), h('div', {}, R.sPer, h('span', { text: T('sPer') })),
+      h('div', {}, R.sAddr, h('span', { text: T('sAddr') })), h('div', {}, R.sDays, h('span', { text: T('sDays') }))),
+    R.sHint, R.sLines,
+    h('div', { class: 'sum-btns' },
+      h('button', { type: 'button', class: 'btn btn-g btn-sm', onClick: async () => { if (!need()) return; await sendTelegram(shareText()); } }, ic('send', 17), T('tg')),
+      h('a', { class: 'btn btn-g btn-sm', href: `https://wa.me/${waNum}`, target: '_blank', rel: 'noopener', onClick: e => {
+        if (!need()) { e.preventDefault(); return; }
+        e.currentTarget.href = `https://wa.me/${waNum}?text=${encodeURIComponent(shareText())}`;
+      } }, ic('chat', 18, 2), T('wa')),
+      h('button', { type: 'button', class: 'btn btn-w mag wide', onClick: () => { if (need()) openProposal(); } }, ic('doc', 18, 2), T('order')),
+      h('a', { class: 'btn btn-g btn-sm wide', href: '#contact' }, ic('headset', 17), T('consult'))),
+    h('p', { class: 'sum-note', text: T('note') }));
+}
+function updateSum() {
+  if (!R.sTotal) return;
+  const r = totals();
+  R.sGroup.textContent = groupName(S.group);
+  R.sPkg.replaceChildren(h('i', { text: `${T('pkgL')}:` }), r.pkg ? `${r.pkg.name} · ${pname(S.period)}` : (S.group === 'malls' ? T('byMall') : T('byNet')));
+  const needPkg = !r.pkg && packages().length > 0 && r.rows.some(x => !isMall(x.a) && !x.a.price);
+  const onReq = r.rows.length > 0 && !r.broadcast && !needPkg;
+  R.sTotal.classList.toggle('req', onReq);
+  if (onReq) { cancelAnimationFrame(R.sTotal._raf); R.sTotal._v = 0; R.sTotal.textContent = T('onReq'); }
+  else tween(R.sTotal, r.total, money, 900);
+  R.sDisc.replaceChildren(...(r.discount > 0 ? [h('s', { text: money(r.subtotal + r.studioSum) }), h('span', { class: 'off', text: `−${r.pct}%` })] : []));
+  tween(R.sAir, r.airings, nf, 900); tween(R.sAddr, r.rows.length, nf);
+  R.sPer.textContent = r.perSpot ? money(r.perSpot) : '—'; R.sDays.textContent = nf(r.days);
+  const line = (a, b) => h('div', {}, h('span', { text: a }), h('b', { text: b }));
+  const lines = [];
+  if (r.subtotal) lines.push(line(`${T('broadcast')} · ${r.rows.length} × ${r.months} ${T('months')}${r.discount > 0 ? ` (${T('monthlyPrice')})` : ''}`, money(r.subtotal)));
+  if (r.discount > 0) lines.push(line(`${T('disc')} · ${pname(S.period)}`, `− ${money(r.discount)}`));
+  r.studio.forEach(s => lines.push(line(`${T('studioL')}: ${lang === 'ru' ? (s.name_ru || s.name) : s.name}`, `+ ${money(s.price)}`)));
+  R.sLines.replaceChildren(...lines);
+  const partial = !needPkg && r.broadcast && r.rows.some(x => !x.unit);
+  R.sHint.textContent = needPkg ? T('pickPkg') : (partial || onReq) ? T('noPrice') : T('hint');
+  R.sHint.hidden = r.rows.length > 0 && !needPkg && !partial && !onReq;
+  R.sum.classList.toggle('is-empty', !r.rows.length);
+  if (R.selCnt) R.selCnt.textContent = `${nf(r.rows.length)} ${T('selected')}`;
+  if (R.mTotal) {
+    if (onReq) { cancelAnimationFrame(R.mTotal._raf); R.mTotal._v = 0; R.mTotal.textContent = T('onReq'); }
+    else tween(R.mTotal, r.total, money, 900);
+  }
+}
+function shareText() {
+  const r = totals();
+  const list = r.rows.length && r.rows.length <= 12 ? ' — ' + r.rows.map(x => isMall(x.a) ? `${mallInfo(x.a).en || x.a.address} (${x.spots}/${T('bPerDay')})` : `${x.n.short}, ${shortAddr(x.a.address)}`).join('; ') : '';
+  return [T('reqT'),
+    S.brand ? `${T('brand')}: ${S.brand}` : '', S.contact ? `${T('contact')}: ${S.contact}` : '',
+    `${T('place')}: ${groupName(S.group)}`,
+    `${T('period')}: ${pname(S.period)} (${r.months} ${T('months')})`,
+    `${T('pkgL')}: ${r.pkg ? r.pkg.name : (S.group === 'malls' ? T('byMall') : T('byNet'))}`,
+    `${T('sAddr')}: ${r.rows.length}${list}`,
+    `${T('sAir')}: ${nf(r.airings)}`,
+    r.studio.length ? `${T('studioL')}: ${r.studio.map(s => (lang === 'ru' ? (s.name_ru || s.name) : s.name)).join(', ')}` : '',
+    `${T('total')}: ${r.broadcast ? money(r.total) : T('onReq')}`].filter(Boolean).join('\n');
+}
+async function sendTelegram(text) {
+  await copy(text);
+  toast(T('tgCopied'));
+  const u = cfg().telegram;
+  if (u) window.open(`https://t.me/${u}`, '_blank', 'noopener');
+}
+
+/* ================================================================ պատրաստի առաջարկ (տպել / PDF) */
+function openProposal() {
+  const r = totals(), c = cfg();
+  const d = new Date();
+  const dt = `${String(d.getDate()).padStart(2, '0')}.${String(d.getMonth() + 1).padStart(2, '0')}.${d.getFullYear()}`;
+  const kv = (k, v) => h('div', {}, h('span', { text: k }), h('b', { text: v || '—' }));
+  const metric = (v, k) => h('div', { class: 'pm' }, h('b', { text: v }), h('span', { text: k }));
+  const rows = r.rows.map((x, i) => h('tr', {},
+    h('td', { text: i + 1 }), h('td', { text: x.n.short }),
+    h('td', { text: isMall(x.a) ? (mallInfo(x.a).en || x.a.address) : shortAddr(x.a.address) }),
+    h('td', { text: `${x.spots}/${lang === 'ru' ? 'день' : 'օր'}` }), h('td', { text: x.unit ? money(x.unit) : T('onReq') })));
+  const sheet = h('div', { class: 'sheet', id: 'sheet' },
+    h('div', { class: 'sh-top' }, h('img', { src: 'logo.png', alt: 'Mix Media' }),
+      h('div', { class: 'sh-co' }, h('b', { text: T('company') }), h('span', { text: T('address') }), h('span', { text: `${c.phone} · info@mix-media.am` }))),
+    h('div', { class: 'sh-bar' }),
+    h('div', { class: 'sh-title' }, h('small', { text: T('propDoc') }), h('h2', { text: `${groupName(S.group)} · ${T('calcT').join('')}` }), h('p', { text: T('propSlogan') })),
+    h('div', { class: 'sh-kv' }, kv(T('propClient'), S.brand), kv(T('contact'), S.contact), kv(T('period'), `${pname(S.period)} · ${r.months} ${T('months')}`),
+      kv(T('pkgL'), r.pkg ? r.pkg.name : (S.group === 'malls' ? T('byMall') : T('byNet'))), kv(T('propDate'), dt)),
+    h('div', { class: 'sh-m' }, metric(nf(r.rows.length), T('sAddr')), metric(nf(r.airings), T('sAir')), metric(r.perSpot ? money(r.perSpot) : '—', T('sPer')),
+      metric(r.broadcast ? money(r.total) : T('onReq'), T('total'))),
+    h('table', { class: 'sh-t' }, h('thead', {}, h('tr', {}, ...[T('propN'), T('propNet'), T('propAddr'), T('propFreq'), T('propCost')].map(x => h('th', { text: x })))),
+      h('tbody', {}, ...rows)),
+    r.studio.length ? h('table', { class: 'sh-t' }, h('thead', {}, h('tr', {}, h('th', { text: T('propAddon') }), h('th', { text: T('period') }), h('th', { text: T('propSum') }))),
+      h('tbody', {}, ...r.studio.map(s => h('tr', {}, h('td', { text: lang === 'ru' ? (s.name_ru || s.name) : s.name }), h('td', { text: T('propOnce') }), h('td', { text: money(s.price) }))))) : null,
+    h('div', { class: 'sh-sum' },
+      r.discount > 0 ? h('div', {}, h('span', { text: `${T('broadcast')} (${T('monthlyPrice')})` }), h('s', { text: money(r.subtotal) })) : null,
+      r.discount > 0 ? h('div', {}, h('span', { text: `${T('disc')} · ${pname(S.period)}` }), h('b', { text: `− ${money(r.discount)}` })) : null,
+      h('div', { class: 'big' }, h('span', { text: T('propTotal') }), h('b', { text: r.broadcast ? money(r.total) : T('onReq') }))),
+    h('p', { class: 'sh-note', text: T('note') }));
+  if (!R.prop) {
+    R.prop = h('div', { class: 'mdl prop', role: 'dialog', 'aria-modal': 'true', onClick: e => { if (e.target === R.prop) closeProp(); } });
+    document.body.append(R.prop);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && R.prop.classList.contains('show')) closeProp(); });
+  }
+  R.prop.replaceChildren(h('div', { class: 'mdl-box wide' },
+    h('div', { class: 'mdl-h' }, h('div', { class: 'mdl-tt' }, h('h3', { text: T('propT') }), h('small', { text: `${r.rows.length} ${T('addrs')} · ${r.broadcast ? money(r.total) : T('onReq')}` })),
+      h('button', { type: 'button', class: 'ibtn2', 'aria-label': T('close'), onClick: closeProp }, ic('x', 18, 2.2))),
+    h('div', { class: 'mdl-b' }, sheet),
+    h('div', { class: 'mdl-f' },
+      h('button', { type: 'button', class: 'btn btn-g2 btn-sm', onClick: async () => { await sendTelegram(shareText()); } }, ic('send', 17), T('tg')),
+      h('button', { type: 'button', class: 'btn btn-p mag', onClick: () => window.print() }, ic('print', 18, 2), T('propPrint')))));
+  document.documentElement.classList.add('lock', 'printing');
+  R.prop.classList.add('show');
+}
+function closeProp() { R.prop.classList.remove('show'); document.documentElement.classList.remove('lock', 'printing'); }
+
+/* ================================================================ գործընկերներ */
+const BANKS = ['ameriabank', 'araratbank', 'fastbank', 'idbank', 'inecobank', 'tellcell', 'vtb'];
+const BRANDS = ('4uam akg alaska alfapharm amare aragatsfood araks araratcoffee armeniawine artfood ashtarakdzu atenk baldi beko bekon bigprojects bmw bosch ' +
+  'calvinklien carmark carrefour cofix danz dignisi domus dragonmotors ecoville eldorado elegant etam exteriorgroup guess gurmenia hermitage hothouse ideal ' +
+  'intimissimi italsolar jac kfc kiabi kinodaran kinopark lebanon levis mango marcogroup megamall megicland milkin mogo nortun ost ovio ovs pandora paul penti ' +
+  'pregomesh rego sard shen solaron sportmaster time tommy ucom vega vesta victoriasecret vtelecom yeremyan yerevancity yerevanmall yerevanpark zigzag zovq').split(' ');
+const PNAME = { '4uam': '4UAM', akg: 'AKG', bmw: 'BMW', jac: 'JAC', kfc: 'KFC', ovs: 'OVS', ucom: 'Ucom', ost: 'OST', vtb: 'VTB', idbank: 'IDBank' };
+const pName = s => PNAME[s] || s.charAt(0).toUpperCase() + s.slice(1);
+function renderPartners() {
+  const half = Math.ceil(BRANDS.length / 2);
+  const row = (list, rev, dur) => {
+    const rep = Math.max(1, Math.ceil(16 / list.length));
+    const items = Array.from({ length: rep }, () => list).flat();
+    const part = () => h('div', {}, ...items.map(s => h('span', { class: 'plogo', title: pName(s) },
+      h('img', { src: `${IMG}partners/${s}.jpg`, alt: pName(s), loading: 'lazy', onError: e => { e.currentTarget.parentNode.remove(); } }))));
+    return h('div', { class: `prow${rev ? ' rev' : ''}`, style: `--dur:${dur}s` }, h('div', { class: 'track' }, part(), part()));
+  };
+  $('#partners').replaceChildren(h('div', { class: 'wrap' }, secHead(T('partnersE'), T('partnersT'), null)),
+    h('div', { class: 'prows rv' }, row(BANKS, false, 34), row(BRANDS.slice(0, half), true, 90), row(BRANDS.slice(half), false, 96)));
+  reveal($('#partners'));
+}
+
+/* ================================================================ ինչու MIX MEDIA */
+function renderWhy() {
+  $('#why').replaceChildren(h('div', { class: 'wrap' },
+    secHead(T('whyE'), T('whyT'), T('whyS')),
+    h('div', { class: 'steps rv' }, ...T('why').map(([icon, title, desc], k) => h('div', { class: 'step' },
+      h('div', { class: 'step-ic' }, ic(icon, 34, 1.6), h('span', { class: 'step-n', text: `0${k + 1}` })),
+      h('h3', { text: title }), h('p', { text: desc }))))));
+  reveal($('#why'));
+}
+
+/* ================================================================ հեռարձակման ցանց և ազատ տեղեր (իրական տվյալներ) */
+function renderNetwork() {
+  const cap = D.data.capacity || 20;
+  const cards = [];
+  groupNets('city').forEach(n => cards.push({ n, title: n.short, sub: T('subSmp'), pts: n.addresses.length, free: Math.round(n.free / Math.max(1, n.addresses.length)), icon: 'store' }));
+  groupNets('malls').forEach(n => n.addresses.forEach(a => cards.push({ img: mallInfo(a).img, title: mallInfo(a).en || a.address, sub: T('subMall'), pts: 1, free: a.free, icon: 'building' })));
+  groupNets('other').slice().sort((a, b) => b.addresses.length - a.addresses.length).slice(0, 7)
+    .forEach(n => cards.push({ n, title: n.short, sub: T('subSmp'), pts: n.addresses.length, free: Math.round(n.free / Math.max(1, n.addresses.length)), icon: 'cart' }));
+  const grid = h('div', { class: 'bgrid' }, ...cards.map((c, k) => {
+    const free = Math.max(0, Math.min(cap, c.free)), busy = cap - free;
+    const num = h('b', { text: '0' });
+    const fill = h('i', { style: 'width:0%' });
+    const el = h('div', { class: `bcard spot${free <= 3 ? ' hot' : ''}` },
+      h('div', { class: 'bcard-t' },
+        c.n ? logoEl(c.n, 42) : h('span', { class: 'logo bimg', style: 'width:42px;height:42px' }, c.img ? h('img', { src: c.img, alt: '', loading: 'lazy' }) : ic(c.icon, 22)),
+        h('div', {}, h('b', { text: c.title }), h('small', { text: c.pts > 1 ? `${c.sub} · ${T('pointsN')(nf(c.pts))}` : c.sub })),
+        h('span', { class: 'onair' }, h('i'), 'LIVE')),
+      h('div', { class: 'bcard-n' }, num, h('span', { text: `/ ${cap}` })),
+      h('div', { class: 'bbar' }, fill),
+      h('div', { class: 'bcard-f' }, h('span', { text: free <= 3 ? T('lastPlaces') : T('freeOf')(cap) }), h('span', { class: 'eq', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), h('i'))));
+    el._go = () => { tween(num, free, nf, 1400); fill.style.width = `${(busy / cap) * 100}%`; };
+    return h('div', { class: 'rv', style: `--d:${Math.min(k, 8) * .06}s` }, el);
+  }));
+  $('#network').replaceChildren(h('div', { class: 'wrap' }, secHead(T('netE'), T('netT'), T('netS')(cap)), grid));
+  reveal($('#network'));
+  const cardsEl = grid.querySelectorAll('.bcard');
+  if (io && !reduced) {
+    const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target._go(); o.unobserve(e.target); } }), { threshold: .3 });
+    cardsEl.forEach(el => o.observe(el));
+  } else cardsEl.forEach(el => el._go());
+}
+
+/* ================================================================ հետադարձ կապ + footer + mobile bar */
+function renderContact() {
+  const c = D.data ? cfg() : { phone: '+374 44 702 703', whatsapp: '37444702703', telegram: 'MixMediaArmenia' };
+  const tel = String(c.phone || '').replace(/[^\d+]/g, '');
+  const wa = String(c.whatsapp || c.phone || '').replace(/\D/g, '');
+  const item = (href, icon, k, v, ext) => h('a', { class: 'citem', href, target: ext ? '_blank' : null, rel: ext ? 'noopener' : null },
+    h('span', { class: 'citem-ic' }, ic(icon, 20, 1.9)), h('span', {}, h('small', { text: k }), h('b', { text: v })));
+  const f = {};
+  const fld = (k, label, type = 'text', req = false) => {
+    f[k] = type === 'area' ? h('textarea', { class: 'finp', rows: '4', name: k }) : h('input', { class: 'finp', type, name: k, required: req, autocomplete: { name: 'name', phone: 'tel', company: 'organization' }[k] || 'off', placeholder: k === 'phone' ? '+374' : null });
+    return h('label', { class: `ffield${type === 'area' ? ' full' : ''}` }, h('span', {}, label, req ? h('i', { text: ' *' }) : null), f[k]);
+  };
+  const form = h('form', { class: 'cform', novalidate: true, onSubmit: async e => {
+    e.preventDefault();
+    const v = k => f[k].value.trim();
+    if (!v('name') || !v('phone')) { toast(T('fNeed')); (v('name') ? f.phone : f.name).focus(); return; }
+    const lines = [T('callReq'), '', `${T('fName')}: ${v('name')}`, `${T('fPhone')}: ${v('phone')}`];
+    if (v('company')) lines.push(`${T('fCompany')}: ${v('company')}`);
+    if (v('message')) lines.push(`${T('fMsg')}: ${v('message')}`);
+    if (D.data && S.sel.size) lines.push('', '— ' + T('nav').calc + ' —', shareText());
+    await sendTelegram(lines.join('\n'));
+  } },
+  fld('name', T('fName'), 'text', true), fld('phone', T('fPhone'), 'tel', true), fld('company', T('fCompany')), fld('message', T('fMsg'), 'area'),
+  h('button', { class: 'btn btn-w mag full', type: 'submit' }, ic('send', 18, 2), T('fSend')));
+  $('#contact').replaceChildren(h('div', { class: 'wrap' }, h('div', { class: 'cta-box rv' },
+    h('div', { class: 'rings', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), h('b')),
+    h('div', { class: 'cgrid' },
+      h('div', {},
+        h('span', { class: 'eyebrow', text: T('ctaE') }),
+        h('h2', { text: T('ctaT') }),
+        h('p', { text: T('ctaS') }),
+        h('div', { class: 'citems' },
+          item(`tel:${tel}`, 'phone', T('callUs'), c.phone),
+          item('mailto:info@mix-media.am', 'mail', T('email'), 'info@mix-media.am'),
+          c.telegram ? item(`https://t.me/${c.telegram}`, 'send', 'Telegram', `@${c.telegram}`, true) : null,
+          wa ? item(`https://wa.me/${wa}`, 'chat', 'WhatsApp', T('writeNow'), true) : null)),
+      form))));
+  $('#foot').replaceChildren(h('div', { class: 'wrap foot' },
+    h('span', { text: `© ${new Date().getFullYear()} ${T('company')} · ${T('address')}` }),
+    h('span', { class: 'foot-l' }, h('a', { href: 'https://bubuka.am/', target: '_blank', rel: 'noopener', text: 'bubuka.am' }),
+      h('a', { href: 'https://mix-media.am', target: '_blank', rel: 'noopener', text: 'mix-media.am' }))));
+  reveal($('#contact'));
+}
+function renderMbar() {
+  R.mTotal = h('b', { text: '0 ֏' });
+  $('#mbar').replaceChildren(h('div', {}, h('small', { text: T('mTotal') }), R.mTotal),
+    h('a', { class: 'btn btn-w btn-sm', href: '#sum' }, T('mBtn'), ic('arrow', 16, 2.2)));
+}
+
+/* ================================================================ լեզու */
+function setLang(l) {
+  if (l === lang) return;
+  lang = l; mem.set('mm-price-lang', l);
+  const u = new URL(location.href); u.searchParams.set('lang', l); history.replaceState(null, '', u);
+  renderAll();
+}
+function renderAll() {
+  document.documentElement.lang = lang === 'ru' ? 'ru' : 'hy';
+  document.title = T('title');
+  renderNav(); renderHero(); renderMbar(); renderContact();
+  if (D.data) { renderLocs(); renderPkgs(); renderCalc(); renderPartners(); renderWhy(); renderNetwork(); if (S.m.open) drawModal(); }
+  watchSections();
+}
+
+/* ================================================================ կուրսոր, լույս, թեքում, մագնիս */
+function interactions() {
+  const tiltReset = el => { el.style.transition = 'transform .7s cubic-bezier(.2,.7,.2,1), box-shadow .4s'; el.style.transform = ''; };
+  const magReset = el => { el.style.transition = 'transform .6s cubic-bezier(.3,1.5,.5,1)'; el.style.transform = ''; };
+  let tiltEl = null, magEl = null;
+  let dot, ring, lw, lbl, mx = -100, my = -100, rx = -100, ry = -100, loop = 0;
+  if (fine && !reduced) {
+    document.documentElement.classList.add('has-cursor');
+    dot = h('div', { class: 'cur cur-dot' }); ring = h('div', { class: 'cur cur-ring' });
+    lbl = h('div', { class: 'cur-lbl' }); lw = h('div', { class: 'cur' }, lbl);
+    document.body.append(ring, dot, lw);
+    const tick = () => {
+      rx += (mx - rx) * .2; ry += (my - ry) * .2;
+      ring.style.transform = `translate3d(${rx}px,${ry}px,0)`;
+      lw.style.transform = `translate3d(${rx}px,${ry}px,0)`;
+      loop = Math.abs(mx - rx) + Math.abs(my - ry) > .2 ? requestAnimationFrame(tick) : 0;
+    };
+    document.addEventListener('pointermove', e => {
+      if (e.pointerType !== 'mouse') return;
+      mx = e.clientX; my = e.clientY;
+      dot.style.transform = `translate3d(${mx}px,${my}px,0)`;
+      if (!loop) loop = requestAnimationFrame(tick);
+    }, { passive: true });
+    document.addEventListener('pointerover', e => {
+      const t = e.target instanceof Element ? e.target : null;
+      if (!t) return;
+      const txt = t.closest('input, textarea');
+      const lab = !txt && t.closest('[data-cursor]');
+      const hov = !txt && !lab && t.closest('a, button, .pkg, .mall');
+      ring.classList.toggle('txt', !!txt); dot.classList.toggle('lbl', !!lab || !!txt);
+      ring.classList.toggle('lbl', !!lab); ring.classList.toggle('hov', !!hov);
+      if (lab) { lbl.textContent = lab.dataset.cursor; lbl.classList.add('show'); } else lbl.classList.remove('show');
+    });
+    document.addEventListener('pointerdown', () => ring.classList.add('down'));
+    document.addEventListener('pointerup', () => ring.classList.remove('down'));
+    document.documentElement.addEventListener('mouseleave', () => [dot, ring, lw].forEach(x => x.classList.add('out')));
+    document.documentElement.addEventListener('mouseenter', () => [dot, ring, lw].forEach(x => x.classList.remove('out')));
+  }
+  document.addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse') return;
+    const t = e.target instanceof Element ? e.target : null;
+    if (!t) return;
+    const sp = t.closest('.spot');
+    if (sp) { const r = sp.getBoundingClientRect(); sp.style.setProperty('--mx', `${e.clientX - r.left}px`); sp.style.setProperty('--my', `${e.clientY - r.top}px`); }
+    if (!fine || reduced) return;
+    const tl = t.closest('.tilt:not([aria-disabled="true"])');
+    if (tiltEl && tiltEl !== tl) tiltReset(tiltEl);
+    tiltEl = tl;
+    if (tl) {
+      const r = tl.getBoundingClientRect(), px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
+      tl.style.transition = 'transform .18s ease-out, box-shadow .4s';
+      tl.style.transform = `perspective(1100px) rotateX(${(-py * 7).toFixed(2)}deg) rotateY(${(px * 9).toFixed(2)}deg) translateY(-6px)`;
+    }
+    const mg = t.closest('.mag');
+    if (magEl && magEl !== mg) magReset(magEl);
+    magEl = mg;
+    if (mg) {
+      const r = mg.getBoundingClientRect(), dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+      mg.style.transition = 'transform .2s ease-out';
+      mg.style.transform = `translate(${(dx * .22).toFixed(1)}px, ${(dy * .35).toFixed(1)}px)`;
+    }
+  }, { passive: true });
+  document.addEventListener('pointerleave', () => { if (tiltEl) tiltReset(tiltEl); if (magEl) magReset(magEl); tiltEl = magEl = null; });
+  if (!reduced) document.addEventListener('click', e => {
+    if (!(e.target instanceof Element) || !e.target.closest('button, a, .pkg, .mall') || !e.clientX) return;
+    const r = h('span', { class: 'rip', style: `left:${e.clientX}px;top:${e.clientY}px` });
+    document.body.append(r); setTimeout(() => r.remove(), 750);
+  });
+}
+
+/* ================================================================ սքրոլ՝ progress, nav, ակտիվ բաժին, mobile bar */
+let secObs = null;
+function watchSections() {
+  if (!io) return;
+  if (secObs) secObs.disconnect();
+  secObs = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const id = e.target.id === 'packages' && S.group === 'malls' ? 'malls' : e.target.id;
+    document.querySelectorAll('.links a').forEach(a => a.classList.toggle('on', a.dataset.sec === id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  ['where', 'packages', 'calc', 'partners', 'why', 'network', 'contact'].forEach(id => secObs.observe(document.getElementById(id)));
+}
+function scrolling() {
+  let ticking = false, calcIn = false, sumIn = false;
+  const upd = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    $('#progress').style.transform = `scaleX(${max > 0 ? Math.min(1, scrollY / max) : 0})`;
+    $('#nav').classList.toggle('scrolled', scrollY > 40);
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(upd); } }, { passive: true });
+  upd();
+  if (!io) return;
+  const mbar = () => $('#mbar').classList.toggle('show', calcIn && !sumIn && S.sel.size > 0);
+  new IntersectionObserver(es => { calcIn = es[0].isIntersecting; mbar(); }, { rootMargin: '0px 0px -30% 0px' }).observe($('#calc'));
+  const watchSum = () => { const s = document.getElementById('sum'); if (s) sumObs.observe(s); };
+  const sumObs = new IntersectionObserver(es => { sumIn = es[0].isIntersecting; mbar(); }, { threshold: .25 });
+  new MutationObserver(() => { sumObs.disconnect(); watchSum(); mbar(); }).observe($('#calc'), { childList: true });
+  document.addEventListener('click', () => setTimeout(mbar, 0));
+  watchSum();
+}
+
+/* ================================================================ մեկնարկ */
+renderAll();
+interactions();
+scrolling();
+waves();
+fetch('price.json', { cache: 'no-cache' })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d => {
+    D.data = d;
+    S.group = ['city', 'malls', 'other'].find(g => d.groups[g] && d.groups[g].count) || 'city';
+    fixPeriod();
+    renderNav(); renderStats(); renderLocs(); renderPkgs(); renderCalc(); renderPartners(); renderWhy(); renderNetwork(); renderContact();
+    watchSections();
+  })
+  .catch(err => {
+    console.error(err);
+    $('#where').replaceChildren(h('div', { class: 'wrap' }, h('div', { class: 'err' }, T('err'), h('a', { href: 'tel:+37444702703', text: '+374 44 702 703' }))));
+  });
+})();
+</script>
+</body>
+</html>
